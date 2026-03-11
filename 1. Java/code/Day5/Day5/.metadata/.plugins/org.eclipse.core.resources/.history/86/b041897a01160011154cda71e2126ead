@@ -1,0 +1,17 @@
+package com.cdac.main;
+
+import com.cdac.Mangers.EmployeeManager;
+
+public class Program {
+
+	public static void main(String[] args) {
+		EmployeeManager em=new EmployeeManager();
+		em.PrintEmployees();
+		em.UpdateEmployee();
+		System.out.println("------------------------------------------------------");
+		em.PrintEmployees();
+		
+	}
+	
+
+}

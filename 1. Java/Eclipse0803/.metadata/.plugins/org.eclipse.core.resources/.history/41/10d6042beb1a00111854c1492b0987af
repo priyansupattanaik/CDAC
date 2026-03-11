@@ -1,0 +1,53 @@
+package com.hospital.models;
+
+public class Ward {
+	
+	private int wardID;
+	private String wardName;
+	private int totalBeds;
+	private double chargesPerDay;
+	public Ward(int wardID, String wardName, int totalBeds, double chargesPerDay) {
+		super();
+		this.wardID = wardID;
+		this.wardName = wardName;
+		this.totalBeds = totalBeds;
+		this.chargesPerDay = chargesPerDay;
+	}
+	public int getWardID() {
+		return wardID;
+	}
+	public void setWardID(int wardID) {
+		this.wardID = wardID;
+	}
+	public String getWardName() {
+		return wardName;
+	}
+	public void setWardName(String wardName) {
+		this.wardName = wardName;
+	}
+	public int getTotalBeds() {
+		return totalBeds;
+	}
+	public void setTotalBeds(int totalBeds) {
+		this.totalBeds = totalBeds;
+	}
+	public double getChargesPerDay() {
+		return chargesPerDay;
+	}
+	public void setChargesPerDay(double chargesPerDay) {
+		this.chargesPerDay = chargesPerDay;
+	}
+	
+	public int getAvailableBeds() {
+		return totalBeds - occupiedBeds;
+		
+	}
+	@Override
+	public String toString() {
+		return "Ward [wardID=" + wardID + ","+ getAvailableBeds()+" wardName=" + wardName + ", totalBeds=" + totalBeds + ", chargesPerDay="
+				+ chargesPerDay + "]";
+	}
+	
+	
+
+}

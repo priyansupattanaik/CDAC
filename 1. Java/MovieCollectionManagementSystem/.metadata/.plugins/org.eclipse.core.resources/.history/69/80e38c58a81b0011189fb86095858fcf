@@ -1,0 +1,54 @@
+package com.movie.managers;
+
+public class MovieManager {
+
+	public void addMovies() {
+		mlist.
+		
+	}
+
+	public void viewMovies() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void searchMovie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateMovie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteMovie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sortByTitle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sortByDirector() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sortByRating() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sortByReleaseYear() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+		
+	}
+	
+	

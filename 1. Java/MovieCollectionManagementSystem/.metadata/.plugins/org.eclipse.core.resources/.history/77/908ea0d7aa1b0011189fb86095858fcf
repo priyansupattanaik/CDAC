@@ -1,0 +1,210 @@
+package com.movie.managers;
+
+import com.movie.models.Movie;
+import com.movie.exception.*;
+
+import java.util.*;
+
+public abstract class MovieManager extends MovieOperation {
+
+     ArrayList<Movie> Movie = new ArrayList<>();
+     
+     public MovieManager() {
+    	 Movie.add(new Movie(1, "Movie 1", "A", "Horror", 9.8, 2000));
+    	 Movie.add(new Movie(3, "Movie 2", "B", "Action", 8.2, 2013));
+    	 Movie.add(new Movie(5, "Movie 3", "C", "Action", 9.9, 2026));
+    	 Movie.add(new Movie(4, "Movie 4", "D", "Comedy", 5.4, 2002));
+    	 Movie.add(new Movie(2, "Movie 5", "E", "SuperHero", 6.9, 2017));    	 
+     }
+     
+     Scanner sc = new Scanner(System.in);
+
+    @Override
+    public void addMovie() throws InvalidMovieDataException, DuplicateMovieIdException {
+
+        try {
+
+            System.out.print("Enter Movie ID: ");
+            int id = sc.nextInt();
+            sc.nextLine();
+
+            for (Movie b : Movie) {
+                if (b.getMovieID() == id) {
+                    throw new DuplicateMovieIdException("Movie ID already exists!");
+                }
+            }
+
+            System.out.print("Enter Title: ");
+            String title = sc.nextLine();
+            
+            System.out.print("Enter Author: ");
+            String author = sc.nextLine();
+
+            System.out.print("Enter Price: ");
+            double price = sc.nextDouble();
+
+            System.out.print("Enter Rating: ");
+            double rating = sc.nextDouble();
+
+            System.out.print("Enter Publication Year: ");
+            int year = sc.nextInt();
+
+            if (price < 0 || rating < 0) {
+                throw new InvalidMovieDataException("Price or Rating cannot be negative.");
+            }
+
+            Movie Movie = new Movie(id, title, director, price, rating, year);
+
+            Movie.add(Movie);
+
+            System.out.println("Movie added successfully.");
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    public void viewMovie() {
+
+        if (Movie.isEmpty()) {
+            System.out.println("No Movie available.");
+            return;
+        }
+        for (Movie b : Movie) {
+            System.out.println(b);
+        }
+    }
+
+    @Override
+    public void searchMovie() throws MovieNotFoundException {
+
+        try {
+
+            System.out.print("Enter Movie ID to search: ");
+            int id = sc.nextInt();
+
+            for (Movie b : Movie) {
+                if (b.getMovieID() == id) {
+                    System.out.println(b);
+                    return;
+                }
+            }
+
+            throw new MovieNotFoundException("Movie not found!");
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    public void updateMovie() throws MovieNotFoundException {
+
+        try {
+
+            System.out.print("Enter Movie ID to update: ");
+            int id = sc.nextInt();
+            sc.nextLine();
+
+            for (Movie b : Movie) {
+
+                if (b.getMovieID() == id) {
+
+                    System.out.print("Enter New Title: ");
+                    b.setTitle(sc.nextLine());
+
+                    System.out.print("Enter New Author: ");
+                    b.setDirector(sc.nextLine());
+
+                    System.out.print("Enter New Price: ");
+                    b.setGenre(sc.nextLine());
+
+                    System.out.print("Enter New Rating: ");
+                    b.setRating(sc.nextInt());
+
+                    System.out.print("Enter New Publication Year: ");
+                    b.setReleaseYear(sc.nextInt());
+
+                    System.out.println("Movie updated successfully.");
+                    return;
+                }
+            }
+
+            throw new MovieNotFoundException("Movie not found!");
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    public void deleteMovie() throws MovieNotFoundException{
+
+        try {
+
+            System.out.print("Enter Movie ID to delete: ");
+            int id = sc.nextInt();
+
+            Iterator<Movie> it = Movie.iterator();
+
+            while (it.hasNext()) {
+
+                Movie b = it.next();
+
+                if (b.getMovieID() == id) {
+                    it.remove();
+                    System.out.println("Movie deleted successfully.");
+                    return;
+                }
+            }
+
+            throw new MovieNotFoundException("Movie not found!");
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    public void sortByTitle() {
+
+        Collections.sort(Movie, (b1, b2) ->
+                b1.getTitle().compareToIgnoreCase(b2.getTitle()));
+
+        System.out.println("Sorted by Title.");
+        viewMovie();
+    }
+
+    
+    @Override
+    public void sortByDirector() {
+
+        Collections.sort(Movie, (b1, b2) ->
+                b1.getD().compareToIgnoreCase(b2.getDirector()));
+
+        System.out.println("Sorted by Author.");
+        viewMovie();
+    }
+
+
+    @Override
+    public void sortByRating() {
+
+        Collections.sort(Movie, (b1, b2) ->
+                Double.compare(b2.getRating(), b1.getRating()));
+
+        System.out.println("Sorted by Rating.");
+        viewMovie();
+    }
+
+    @Override
+    public void sortByreleaseYear() {
+
+        Collections.sort(Movie, (b1, b2) ->
+                Integer.compare(b1.getrleaseYear(), b2.getreleaseYear()));
+
+        System.out.println("Sorted by Publication Year.");
+        viewMovie();
+    }
+}

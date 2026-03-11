@@ -1,0 +1,12 @@
+package com.hospital.managers;
+
+import com.hospital.models.*;
+import com.hospital.exceptions.*;
+
+public abstract class HospitalOperations {
+	
+	public abstract void addPatient(Patient patient) throws DuplicatePatientIDException, InvalidPersonDataException;
+	public abstract void viewAllPatients();
+	public abstract void findPatientByID(int ID) throws PatientNotFoundException;
+
+}

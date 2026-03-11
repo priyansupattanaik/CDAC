@@ -1,0 +1,27 @@
+package com.cdac.main;
+
+
+class Test
+{
+	int Value1;
+	int Value2;
+	
+	
+	public Test(int Value1, int Value2)
+	{
+		this.Value1=Value1;
+		this.Value2=Value2;
+	}
+	
+	public void ShowValue()
+	{
+		System.out.println("Value1: "+this,Value1+" Value2: "+this.Value2);
+	}
+}
+
+
+
+public class Program
+{
+	
+}

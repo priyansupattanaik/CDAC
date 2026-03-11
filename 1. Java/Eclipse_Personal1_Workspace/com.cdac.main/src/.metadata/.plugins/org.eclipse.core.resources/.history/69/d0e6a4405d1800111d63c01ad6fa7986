@@ -1,0 +1,58 @@
+package com.cdac.main;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
+class Student
+{
+	int RollNo;
+	
+	public Student()
+	{
+		
+	}
+	
+	public Student(int RollNo)
+	{
+		this.RollNo=RollNo;
+	}
+	
+	void Method1()
+	{
+		
+	}
+	void Method2()
+	{
+		
+	}
+}
+
+
+public class Program {
+	
+	public static void main(String[] args) {
+		Class<?> c1=null;
+		try {
+			c1=Class.forName("com.cdac.main.Student");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(c1.getName());
+		System.out.println(c1.getSimpleName());
+		
+		//Method m[]=c1.getMethods();
+		
+		Method m[]=c1.getDeclaredMethods();
+		
+	
+		for(Method m1:m)
+		{
+			System.out.println(m1.getName());
+		}
+	}
+
+}

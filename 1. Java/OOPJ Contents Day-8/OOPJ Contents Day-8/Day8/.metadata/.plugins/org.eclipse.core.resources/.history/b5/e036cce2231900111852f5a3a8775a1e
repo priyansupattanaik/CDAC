@@ -1,0 +1,39 @@
+package com.cdac.main;
+
+class GetTable extends Thread
+{
+	int Num1;
+	
+	public GetTable(int x)
+	{
+		this.Num1=x;
+	}
+	
+	public void run()
+	{
+		PrintTable();
+	}
+	
+	public void PrintTable()
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(this.Num1+" * "+i+" = "+ (i*this.Num1));
+		}
+	}
+}
+
+
+public class Program {
+
+	public static void main(String[] args)  {
+		
+			Thread t1=new GetTable(10);
+			Thread t2=new GetTable(20);
+			
+			t1.start();
+			t2.start();
+		
+	}
+
+}

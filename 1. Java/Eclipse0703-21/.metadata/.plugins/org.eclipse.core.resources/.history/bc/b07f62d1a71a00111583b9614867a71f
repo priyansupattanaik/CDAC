@@ -1,0 +1,104 @@
+package com.library.models;
+
+public class Member {
+	
+	private int memberID;
+	private String Name;
+	private String email;
+	private String phone;
+	private String membershipType;
+	private int maxBooksAllowed;
+	private int booksIssued;
+	private String registrationDate;
+	
+	public Member() {}
+
+	public Member(int memberID, String name, String email, String phone, String membershipType, int maxBooksAllowed, int booksIssued,
+			String registrationDate) {
+		this.memberID = memberID;
+		this.Name = name;
+		this.email = email;
+		this.phone = phone;
+		this.membershipType = membershipType;
+		this.maxBooksAllowed = maxBooksAllowed;
+		this.booksIssued = booksIssued;
+		this.registrationDate = registrationDate;
+	}
+
+	public int getMemberID() {
+		return memberID;
+	}
+
+	public void setMemberID(int memberID) {
+		this.memberID = memberID;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getMembershipType() {
+		return membershipType;
+	}
+
+	public void setMembershipType(String membershipType) {
+		this.membershipType = membershipType;
+	}
+
+	public int getMaxBooksAllowed() {
+		return maxBooksAllowed;
+	}
+
+	public void setMaxBooksAllowed(int maxBooksAllowed) {
+		this.maxBooksAllowed = maxBooksAllowed;
+	}
+
+	public int getBooksIssued() {
+		return booksIssued;
+	}
+
+	public void setBooksIssued(int booksIssued) {
+		this.booksIssued = booksIssued;
+	}
+
+	public String getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(String registrationDate) {
+		this.registrationDate = registrationDate;
+	}
+
+	public boolean canIssueMore() {
+		return booksIssued < maxBooksAllowed;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Member [ID = " +memberID + ", Name=" + name + ", Email= " +email+ ", Phone = " +phone+ ", Type= " +membershipType + ", Books Issued= " +booksIssued+ "/" +maxBooksAllowed+ ", Registered = " +registrationDate+ "]";
+		
+	}
+	
+
+}

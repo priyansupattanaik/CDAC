@@ -1,0 +1,23 @@
+package com.cdac.main;
+
+
+public class Program {
+
+	
+	static void CheckAge(int Age)
+	{
+		if(Age<18)
+		{
+			//InvalidAgeException
+		}
+		else
+		{
+			System.out.println("Your Voting Registartion has been done");
+		}
+	}
+	
+public static void main(String[] args) {
+	
+
+	}
+}

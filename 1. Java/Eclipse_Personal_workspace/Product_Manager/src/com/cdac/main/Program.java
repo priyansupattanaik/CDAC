@@ -1,0 +1,53 @@
+package com.cdac.main;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.cdac.managers.ProductManager;
+import com.cdac.models.Product;
+
+class Program {
+
+    public static void main(String[] args) {
+        
+        int choice;
+        Scanner sc = new Scanner(System.in);
+        
+        ProductManager pm = new ProductManager();
+        
+        do {
+            System.out.println("======================Product Management System======================");
+            System.out.println("Press 1 to Add Product");
+            System.out.println("Press 2 to View All Products");
+            System.out.println("Press 3 to Sort By Product Name");
+            System.out.println("Press 4 to Filter Products (Price > 1000)");
+            System.out.println("Press 5 to Exit the Program");
+            System.out.println("=======================================================================");
+            System.out.println("Enter your choice");
+            choice = sc.nextInt();
+            
+            switch (choice) {
+                case 1:
+                    pm.AddProduct();
+                    break;
+                case 2:
+                    pm.PrintAllRecords();
+                    break;
+                case 3:
+                    pm.SortRecordByName();
+                    break;
+                case 4:
+                    List<Product> pl = pm.GetRecordWherePriceGreaterThan1000();
+                    pl.stream().forEach(System.out::println);
+                    break;
+                case 5:
+                    System.out.println("Exiting The Program! Bye Bye");
+                    break;
+                default:
+                    System.out.println("Invalid Input");
+                    break;
+            }
+        } while(choice != 5);
+
+    }
+}

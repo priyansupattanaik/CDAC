@@ -1,0 +1,56 @@
+package com.cdac.main;
+
+class GetTable extends Thread
+{
+	static int Num1;
+	
+	public GetTable(int x)
+	{
+		this.Num1=x;
+	}
+	
+	public void run()
+	{
+		
+		try {
+			GetTable.PrintTable();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	public static synchronized void PrintTable() throws InterruptedException
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(GetTable.Num1+" * "+i+" = "+ (i*GetTable.Num1)+"By "+Thread.currentThread().getName());
+			Thread.currentThread().sleep(1000);
+		}
+	}
+	
+}
+
+
+public class Program {
+
+	public static void main(String[] args)  {
+		
+			GetTable t1=new GetTable(10);		//Single Resource
+			
+			
+			//Multiple Thread
+			Thread th1=new Thread(t1);			
+			Thread th2=new Thread(t1);
+			
+			
+			th1.setName("Thread One");
+			th2.setName("Thread Two");
+			
+			th1.start();
+			th2.start();
+		
+	}
+
+}

@@ -1,0 +1,1495 @@
+!SESSION 2026-03-06 09:08:37.985 -----------------------------------------------
+eclipse.buildId=4.39.0.20260129-0236
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file C:\Users\HP\Desktop\Training Session\PGCP-AI Feb 2026\OOPJ Contents Day-8\Day8\.metadata\.bak_0.log
+Created Time: 2026-03-06 12:30:10.453
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:10.454
+!MESSAGE 12:30:10.451 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:10.757
+!MESSAGE 12:30:10.756 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:10.942
+!MESSAGE 12:30:10.933 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:11.450
+!MESSAGE 12:30:11.447 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:11.453
+!MESSAGE 12:30:11.452 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:11.952
+!MESSAGE 12:30:11.951 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:12.254
+!MESSAGE 12:30:12.253 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 422
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:17.390
+!MESSAGE 12:30:12.759 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:17.391
+!MESSAGE 12:30:15.989 [pool-2-thread-78] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 1ms
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-03-06 12:30:17.923
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:21.380
+!MESSAGE 12:30:17.919 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:21.381
+!MESSAGE 12:30:18.437 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 4ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:21.383
+!MESSAGE 12:30:19.410 [pool-2-thread-75] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:21.384
+!MESSAGE 12:30:19.667 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:21.384
+!MESSAGE 12:30:21.379 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 425
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:21.553
+!MESSAGE 12:30:21.552 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 426
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:24.213
+!MESSAGE 12:30:22.059 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:24.214
+!MESSAGE 12:30:24.015 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:24.215
+!MESSAGE 12:30:24.203 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:25.168
+!MESSAGE 12:30:24.928 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:27.143
+!MESSAGE 12:30:26.627 [pool-2-thread-76] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:27.396
+!MESSAGE 12:30:27.167 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:27.403
+!MESSAGE 12:30:27.169 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:27.404
+!MESSAGE 12:30:27.390 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 433
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:28.111
+!MESSAGE 12:30:27.659 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:28.112
+!MESSAGE 12:30:27.897 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:28.113
+!MESSAGE 12:30:27.897 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:28.113
+!MESSAGE 12:30:28.093 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 434
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:29.071
+!MESSAGE 12:30:28.607 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:29.073
+!MESSAGE 12:30:28.608 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:29.074
+!MESSAGE 12:30:29.070 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 436
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:30.269
+!MESSAGE 12:30:29.347 [pool-2-thread-76] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:30.270
+!MESSAGE 12:30:30.256 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:30.471
+!MESSAGE 12:30:30.470 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:30.712
+!MESSAGE 12:30:30.692 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:31.877
+!MESSAGE 12:30:31.196 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:31.879
+!MESSAGE 12:30:31.871 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:31.879
+!MESSAGE 12:30:31.871 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:33.208
+!MESSAGE 12:30:31.904 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:56.426
+!MESSAGE 12:30:33.619 [Simple-Language-Server main thread] INFO  o.s.i.v.c.l.u.SimpleWorkspaceService - file changed event: [file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/bin/com/cdac/main/Program.class]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:30:57.128
+!MESSAGE 12:30:56.634 [pool-2-thread-76] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:00.332
+!MESSAGE 12:30:57.130 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:00.334
+!MESSAGE 12:31:00.331 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:01.140
+!MESSAGE 12:31:00.901 [pool-2-thread-76] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:02.040
+!MESSAGE 12:31:02.001 [pool-2-thread-75] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - completion handling - retrieve lastest snapshot for: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:02.286
+!MESSAGE 12:31:02.285 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 448
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:02.481
+!MESSAGE 12:31:02.480 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 449
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:03.210
+!MESSAGE 12:31:02.555 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:03.215
+!MESSAGE 12:31:03.206 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:03.219
+!MESSAGE 12:31:03.206 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:03.721
+!MESSAGE 12:31:03.233 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:05.252
+!MESSAGE 12:31:03.723 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:05.768
+!MESSAGE 12:31:05.328 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:06.177
+!MESSAGE 12:31:06.065 [pool-2-thread-76] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:06.576
+!MESSAGE 12:31:06.371 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:06.889
+!MESSAGE 12:31:06.888 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:07.204
+!MESSAGE 12:31:07.203 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:07.710
+!MESSAGE 12:31:07.709 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:08.281
+!MESSAGE 12:31:07.713 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:08.282
+!MESSAGE 12:31:08.186 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:08.705
+!MESSAGE 12:31:08.389 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:08.903
+!MESSAGE 12:31:08.902 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 459
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:09.066
+!MESSAGE 12:31:09.065 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:09.303
+!MESSAGE 12:31:09.302 [pool-2-thread-75] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:09.590
+!MESSAGE 12:31:09.581 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:09.594
+!MESSAGE 12:31:09.585 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 5ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:09.656
+!MESSAGE 12:31:09.654 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:10.164
+!MESSAGE 12:31:09.814 [pool-2-thread-76] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:10.169
+!MESSAGE 12:31:10.168 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:15.397
+!MESSAGE 12:31:14.891 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 463
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:17.917
+!MESSAGE 12:31:17.893 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:18.401
+!MESSAGE 12:31:18.396 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:20.215
+!MESSAGE 12:31:20.214 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 465
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:20.395
+!MESSAGE 12:31:20.288 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:20.787
+!MESSAGE 12:31:20.786 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:22.052
+!MESSAGE 12:31:22.040 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:22.186
+!MESSAGE 12:31:22.185 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 468
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:22.324
+!MESSAGE 12:31:22.323 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:22.667
+!MESSAGE 12:31:22.666 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:24.180
+!MESSAGE 12:31:23.661 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:26.008
+!MESSAGE 12:31:25.271 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:26.009
+!MESSAGE 12:31:26.007 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 473
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:26.201
+!MESSAGE 12:31:26.200 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 474
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:26.458
+!MESSAGE 12:31:26.457 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 476
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:28.766
+!MESSAGE 12:31:26.925 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - completion request arrived: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:28.767
+!MESSAGE 12:31:26.975 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:28.988
+!MESSAGE 12:31:28.986 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:29.630
+!MESSAGE 12:31:29.629 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 480
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:29.856
+!MESSAGE 12:31:29.855 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 481
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:30.889
+!MESSAGE 12:31:30.249 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:30.891
+!MESSAGE 12:31:30.873 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 482
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:31.384
+!MESSAGE 12:31:31.384 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:33.345
+!MESSAGE 12:31:33.244 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:33.407
+!MESSAGE 12:31:33.364 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:34.481
+!MESSAGE 12:31:33.858 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:34.482
+!MESSAGE 12:31:33.858 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:56.483
+!MESSAGE 12:31:35.964 [Simple-Language-Server main thread] INFO  o.s.i.v.boot.app.SpringSymbolIndex - Update document [file changed]: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:58.626
+!MESSAGE 12:31:57.190 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:58.626
+!MESSAGE 12:31:57.711 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:58.893
+!MESSAGE 12:31:58.892 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 489
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:59.022
+!MESSAGE 12:31:59.021 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 490
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:31:59.464
+!MESSAGE 12:31:59.219 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:00.441
+!MESSAGE 12:32:00.430 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:00.443
+!MESSAGE 12:32:00.435 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:02.525
+!MESSAGE 12:32:02.026 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:04.037
+!MESSAGE 12:32:02.946 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:04.038
+!MESSAGE 12:32:03.325 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:04.263
+!MESSAGE 12:32:04.262 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:05.002
+!MESSAGE 12:32:04.489 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:05.055
+!MESSAGE 12:32:05.004 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:05.057
+!MESSAGE 12:32:05.009 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:05.341
+!MESSAGE 12:32:05.339 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 500
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:05.481
+!MESSAGE 12:32:05.479 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 501
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:05.702
+!MESSAGE 12:32:05.701 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 502
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:05.828
+!MESSAGE 12:32:05.827 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:06.340
+!MESSAGE 12:32:06.335 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:06.601
+!MESSAGE 12:32:06.599 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:06.760
+!MESSAGE 12:32:06.759 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 505
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:12.426
+!MESSAGE 12:32:07.269 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:12.427
+!MESSAGE 12:32:07.342 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:12.427
+!MESSAGE 12:32:11.902 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:13.413
+!MESSAGE 12:32:12.966 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:15.288
+!MESSAGE 12:32:13.901 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:16.175
+!MESSAGE 12:32:16.033 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:16.659
+!MESSAGE 12:32:16.451 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:16.660
+!MESSAGE 12:32:16.649 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:17.160
+!MESSAGE 12:32:17.158 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:17.603
+!MESSAGE 12:32:17.258 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:17.605
+!MESSAGE 12:32:17.461 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:17.606
+!MESSAGE 12:32:17.593 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:17.975
+!MESSAGE 12:32:17.785 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:18.013
+!MESSAGE 12:32:18.002 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:21.828
+!MESSAGE 12:32:18.512 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:21.829
+!MESSAGE 12:32:21.320 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:22.421
+!MESSAGE 12:32:22.409 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:23.597
+!MESSAGE 12:32:22.927 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:24.575
+!MESSAGE 12:32:23.666 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:24.577
+!MESSAGE 12:32:23.788 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:24.600
+!MESSAGE 12:32:24.598 [pool-2-thread-79] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - completion handling - retrieve lastest snapshot for: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:25.315
+!MESSAGE 12:32:25.099 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:27.771
+!MESSAGE 12:32:25.812 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:27.773
+!MESSAGE 12:32:27.695 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:28.191
+!MESSAGE 12:32:28.189 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:29.661
+!MESSAGE 12:32:28.193 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:29.826
+!MESSAGE 12:32:29.825 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 530
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:30.083
+!MESSAGE 12:32:30.082 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:30.343
+!MESSAGE 12:32:30.245 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:30.968
+!MESSAGE 12:32:30.750 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:30.969
+!MESSAGE 12:32:30.841 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 4ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:32.726
+!MESSAGE 12:32:31.244 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:32.728
+!MESSAGE 12:32:32.724 [pool-2-thread-78] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:33.046
+!MESSAGE 12:32:32.991 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:33.228
+!MESSAGE 12:32:33.217 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:36.874
+!MESSAGE 12:32:33.724 [pool-4-thread-21] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:36.875
+!MESSAGE 12:32:35.459 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:36.876
+!MESSAGE 12:32:36.014 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:36.877
+!MESSAGE 12:32:36.218 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:32:57.856
+!MESSAGE 12:32:54.718 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:33:21.545
+!MESSAGE 12:33:07.372 [pool-2-thread-79] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:33:52.094
+!MESSAGE 12:33:26.870 [pool-2-thread-79] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:32.735
+!MESSAGE 12:33:52.607 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:47.377
+!MESSAGE 12:34:47.376 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 540
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:48.351
+!MESSAGE 12:34:47.884 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:48.467
+!MESSAGE 12:34:48.466 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:49.154
+!MESSAGE 12:34:48.975 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:49.155
+!MESSAGE 12:34:48.979 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:49.156
+!MESSAGE 12:34:48.979 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:49.642
+!MESSAGE 12:34:49.641 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:49.643
+!MESSAGE 12:34:49.641 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:49.647
+!MESSAGE 12:34:49.646 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:49.649
+!MESSAGE 12:34:49.646 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:50.527
+!MESSAGE 12:34:50.463 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:50.633
+!MESSAGE 12:34:50.631 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:50.759
+!MESSAGE 12:34:50.747 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:51.321
+!MESSAGE 12:34:51.278 [pool-2-thread-78] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - Starting completion handling for: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:51.765
+!MESSAGE 12:34:51.764 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:52.617
+!MESSAGE 12:34:52.616 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:53.127
+!MESSAGE 12:34:52.944 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:55.448
+!MESSAGE 12:34:53.129 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:55.951
+!MESSAGE 12:34:55.557 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:57.548
+!MESSAGE 12:34:55.954 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 4ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:57.743
+!MESSAGE 12:34:57.742 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 552
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:58.192
+!MESSAGE 12:34:58.136 [pool-2-thread-79] INFO  o.s.i.v.c.l.c.CompositeCompletionEngine - languageId = LanguageId [java]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:58.264
+!MESSAGE 12:34:58.258 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:58.265
+!MESSAGE 12:34:58.263 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:58.266
+!MESSAGE 12:34:58.263 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:34:58.732
+!MESSAGE 12:34:58.730 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:00.558
+!MESSAGE 12:34:59.239 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:00.559
+!MESSAGE 12:35:00.557 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 554
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:00.726
+!MESSAGE 12:35:00.725 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:00.865
+!MESSAGE 12:35:00.851 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:01.374
+!MESSAGE 12:35:01.369 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:01.375
+!MESSAGE 12:35:01.373 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 4ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:04.011
+!MESSAGE 12:35:03.998 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 556
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:04.101
+!MESSAGE 12:35:04.100 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:05.766
+!MESSAGE 12:35:04.104 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:05.767
+!MESSAGE 12:35:05.765 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 557
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:05.839
+!MESSAGE 12:35:05.838 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:06.789
+!MESSAGE 12:35:06.277 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:06.791
+!MESSAGE 12:35:06.788 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:07.915
+!MESSAGE 12:35:06.892 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:07.916
+!MESSAGE 12:35:07.297 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:07.917
+!MESSAGE 12:35:07.297 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:11.436
+!MESSAGE 12:35:08.721 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:11.436
+!MESSAGE 12:35:11.339 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 561
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:11.437
+!MESSAGE 12:35:11.424 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:11.819
+!MESSAGE 12:35:11.607 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:13.574
+!MESSAGE 12:35:11.975 [pool-2-thread-79] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - Starting completion handling for: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:13.576
+!MESSAGE 12:35:13.573 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 564
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:14.086
+!MESSAGE 12:35:14.079 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:14.087
+!MESSAGE 12:35:14.084 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:14.087
+!MESSAGE 12:35:14.084 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:16.760
+!MESSAGE 12:35:15.744 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:16.762
+!MESSAGE 12:35:15.746 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:16.762
+!MESSAGE 12:35:16.003 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:16.764
+!MESSAGE 12:35:16.563 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:16.937
+!MESSAGE 12:35:16.922 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:17.325
+!MESSAGE 12:35:17.323 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 573
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:17.833
+!MESSAGE 12:35:17.832 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:18.028
+!MESSAGE 12:35:18.027 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 575
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:18.352
+!MESSAGE 12:35:18.196 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:19.115
+!MESSAGE 12:35:18.951 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 579
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:19.784
+!MESSAGE 12:35:19.782 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:19.881
+!MESSAGE 12:35:19.880 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:20.587
+!MESSAGE 12:35:20.079 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:20.593
+!MESSAGE 12:35:20.591 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:22.602
+!MESSAGE 12:35:22.111 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:22.921
+!MESSAGE 12:35:22.839 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:23.169
+!MESSAGE 12:35:23.022 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:23.379
+!MESSAGE 12:35:23.378 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:24.419
+!MESSAGE 12:35:23.424 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:24.928
+!MESSAGE 12:35:24.438 [pool-2-thread-79] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:25.467
+!MESSAGE 12:35:24.930 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:25.468
+!MESSAGE 12:35:25.155 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:27.050
+!MESSAGE 12:35:25.649 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:27.051
+!MESSAGE 12:35:27.028 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:29.090
+!MESSAGE 12:35:27.537 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:30.864
+!MESSAGE 12:35:30.862 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:31.382
+!MESSAGE 12:35:31.379 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:31.385
+!MESSAGE 12:35:31.383 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:31.385
+!MESSAGE 12:35:31.384 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:32.336
+!MESSAGE 12:35:32.316 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:32.822
+!MESSAGE 12:35:32.820 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:33.334
+!MESSAGE 12:35:32.824 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:38.200
+!MESSAGE 12:35:33.446 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:38.201
+!MESSAGE 12:35:33.849 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:35:38.202
+!MESSAGE 12:35:33.849 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 5ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:04.273
+!MESSAGE 12:36:03.754 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:04.274
+!MESSAGE 12:36:03.816 [pool-2-thread-78] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:04.275
+!MESSAGE 12:36:04.268 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 6ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:05.892
+!MESSAGE 12:36:05.868 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:06.382
+!MESSAGE 12:36:06.381 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:17.144
+!MESSAGE 12:36:15.461 [pool-2-thread-81] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:53.003
+!MESSAGE 12:36:53.001 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 598
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:53.394
+!MESSAGE 12:36:53.392 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:53.513
+!MESSAGE 12:36:53.511 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:53.902
+!MESSAGE 12:36:53.518 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:54.063
+!MESSAGE 12:36:54.050 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:54.338
+!MESSAGE 12:36:54.336 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:55.307
+!MESSAGE 12:36:54.495 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:55.820
+!MESSAGE 12:36:55.819 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:55.823
+!MESSAGE 12:36:55.822 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:59.061
+!MESSAGE 12:36:58.914 [pool-2-thread-80] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:36:59.573
+!MESSAGE 12:36:59.144 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:00.338
+!MESSAGE 12:37:00.337 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 606
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:00.572
+!MESSAGE 12:37:00.560 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:00.830
+!MESSAGE 12:37:00.829 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 609
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:01.332
+!MESSAGE 12:37:01.331 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 611
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:01.334
+!MESSAGE 12:37:01.331 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:01.707
+!MESSAGE 12:37:01.689 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:02.098
+!MESSAGE 12:37:01.935 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:02.369
+!MESSAGE 12:37:02.368 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 615
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:02.882
+!MESSAGE 12:37:02.713 [pool-2-thread-80] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:03.550
+!MESSAGE 12:37:03.034 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:03.717
+!MESSAGE 12:37:03.644 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:04.336
+!MESSAGE 12:37:04.334 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:04.506
+!MESSAGE 12:37:04.338 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:04.508
+!MESSAGE 12:37:04.338 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:04.509
+!MESSAGE 12:37:04.505 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 619
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:05.136
+!MESSAGE 12:37:04.744 [pool-2-thread-80] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:05.137
+!MESSAGE 12:37:04.941 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:05.901
+!MESSAGE 12:37:05.335 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:05.902
+!MESSAGE 12:37:05.769 [pool-2-thread-80] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:06.035
+!MESSAGE 12:37:06.035 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:06.775
+!MESSAGE 12:37:06.615 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:06.789
+!MESSAGE 12:37:06.787 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:06.914
+!MESSAGE 12:37:06.912 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 629
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:07.281
+!MESSAGE 12:37:07.135 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 630
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:07.296
+!MESSAGE 12:37:07.295 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:08.319
+!MESSAGE 12:37:07.478 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:08.320
+!MESSAGE 12:37:07.702 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:08.479
+!MESSAGE 12:37:08.478 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:08.987
+!MESSAGE 12:37:08.821 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:09.931
+!MESSAGE 12:37:09.576 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:09.932
+!MESSAGE 12:37:09.576 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:09.933
+!MESSAGE 12:37:09.576 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 6ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:09.934
+!MESSAGE 12:37:09.576 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:10.445
+!MESSAGE 12:37:10.225 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 640
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:18.275
+!MESSAGE 12:37:18.274 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:19.190
+!MESSAGE 12:37:19.170 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:19.685
+!MESSAGE 12:37:19.684 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:20.615
+!MESSAGE 12:37:20.478 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:20.763
+!MESSAGE 12:37:20.762 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 645
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:21.118
+!MESSAGE 12:37:21.116 [pool-2-thread-80] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - completion handling - retrieve lastest snapshot for: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:21.119
+!MESSAGE 12:37:21.117 [pool-2-thread-80] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:21.120
+!MESSAGE 12:37:21.117 [pool-2-thread-80] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - Got 0 completions in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:21.522
+!MESSAGE 12:37:21.274 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:22.028
+!MESSAGE 12:37:22.026 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:22.034
+!MESSAGE 12:37:22.030 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:22.337
+!MESSAGE 12:37:22.322 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:23.896
+!MESSAGE 12:37:22.832 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:23.897
+!MESSAGE 12:37:22.836 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:24.216
+!MESSAGE 12:37:24.075 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:25.439
+!MESSAGE 12:37:25.438 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 652
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:25.630
+!MESSAGE 12:37:25.629 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 653
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:25.848
+!MESSAGE 12:37:25.847 [pool-2-thread-80] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:26.871
+!MESSAGE 12:37:26.028 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:26.871
+!MESSAGE 12:37:26.542 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:27.051
+!MESSAGE 12:37:27.035 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:27.483
+!MESSAGE 12:37:27.481 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 659
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:27.993
+!MESSAGE 12:37:27.991 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:29.477
+!MESSAGE 12:37:29.475 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 660
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:29.988
+!MESSAGE 12:37:29.985 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:30.356
+!MESSAGE 12:37:29.989 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:30.358
+!MESSAGE 12:37:30.354 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 661
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:30.873
+!MESSAGE 12:37:30.712 [pool-2-thread-81] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:31.382
+!MESSAGE 12:37:31.378 [pool-4-thread-22] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:32.091
+!MESSAGE 12:37:32.090 [Simple-Language-Server main thread] INFO  o.s.i.v.c.l.u.SimpleWorkspaceService - file changed event: [file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:35.341
+!MESSAGE 12:37:35.339 [pool-2-thread-81] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:37.152
+!MESSAGE 12:37:37.151 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:37.154
+!MESSAGE 12:37:37.153 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:37.206
+!MESSAGE 12:37:37.205 [pool-2-thread-82] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:37.208
+!MESSAGE 12:37:37.207 [pool-2-thread-80] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:37:37.665
+!MESSAGE 12:37:37.210 [pool-2-thread-83] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:03.101
+!MESSAGE 12:39:02.520 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:03.288
+!MESSAGE 12:39:03.287 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 676
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:03.794
+!MESSAGE 12:39:03.791 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:04.911
+!MESSAGE 12:39:03.808 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:17.277
+!MESSAGE 12:39:17.125 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:17.457
+!MESSAGE 12:39:17.456 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 679
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:17.972
+!MESSAGE 12:39:17.707 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:19.001
+!MESSAGE 12:39:17.975 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 5ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:19.146
+!MESSAGE 12:39:19.143 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:20.127
+!MESSAGE 12:39:19.656 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:22.174
+!MESSAGE 12:39:20.635 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:22.175
+!MESSAGE 12:39:20.639 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:22.176
+!MESSAGE 12:39:20.639 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 4ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:22.177
+!MESSAGE 12:39:20.639 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:22.438
+!MESSAGE 12:39:22.360 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:24.721
+!MESSAGE 12:39:24.719 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 684
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:26.053
+!MESSAGE 12:39:25.234 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:27.563
+!MESSAGE 12:39:27.560 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:28.065
+!MESSAGE 12:39:27.587 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:29.883
+!MESSAGE 12:39:28.069 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:29.884
+!MESSAGE 12:39:29.021 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:29.885
+!MESSAGE 12:39:29.720 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change message work done in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:29.889
+!MESSAGE 12:39:29.887 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:30.229
+!MESSAGE 12:39:30.228 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:30.892
+!MESSAGE 12:39:30.890 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 687
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:31.422
+!MESSAGE 12:39:31.266 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:31.730
+!MESSAGE 12:39:31.610 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:32.607
+!MESSAGE 12:39:32.242 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:32.608
+!MESSAGE 12:39:32.242 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:32.875
+!MESSAGE 12:39:32.624 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:33.364
+!MESSAGE 12:39:33.363 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - completion request arrived: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:34.585
+!MESSAGE 12:39:34.584 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 695
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:35.092
+!MESSAGE 12:39:35.091 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:35.477
+!MESSAGE 12:39:35.095 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:35.478
+!MESSAGE 12:39:35.095 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:38.470
+!MESSAGE 12:39:35.651 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:38.471
+!MESSAGE 12:39:36.005 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:38.755
+!MESSAGE 12:39:38.742 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 700
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:38.877
+!MESSAGE 12:39:38.875 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:39.385
+!MESSAGE 12:39:39.172 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - completion request arrived: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:39.386
+!MESSAGE 12:39:39.173 [pool-2-thread-87] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - Got 0 completions in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:41.851
+!MESSAGE 12:39:39.388 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:43.737
+!MESSAGE 12:39:42.271 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:43.739
+!MESSAGE 12:39:42.356 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:43.740
+!MESSAGE 12:39:42.356 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:43.741
+!MESSAGE 12:39:43.647 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:44.160
+!MESSAGE 12:39:44.155 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:44.161
+!MESSAGE 12:39:44.159 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:44.225
+!MESSAGE 12:39:44.213 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:46.243
+!MESSAGE 12:39:44.795 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:46.244
+!MESSAGE 12:39:46.242 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:46.663
+!MESSAGE 12:39:46.332 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:46.950
+!MESSAGE 12:39:46.910 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:47.425
+!MESSAGE 12:39:47.424 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:47.426
+!MESSAGE 12:39:47.424 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:48.064
+!MESSAGE 12:39:47.428 [Reconciler-1] INFO  o.s.i.v.b.j.r.JdtReconciler - reconciling (JDT): file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java done in 4ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:48.235
+!MESSAGE 12:39:48.158 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 710
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:48.248
+!MESSAGE 12:39:48.247 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:48.249
+!MESSAGE 12:39:48.247 [pool-2-thread-88] INFO  o.s.i.v.c.l.c.VscodeCompletionEngineAdapter - Got 0 completions in 1ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:48.778
+!MESSAGE 12:39:48.777 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 712
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:48.905
+!MESSAGE 12:39:48.903 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 713
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:49.044
+!MESSAGE 12:39:49.042 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 714
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:49.143
+!MESSAGE 12:39:49.142 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:49.657
+!MESSAGE 12:39:49.655 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:50.371
+!MESSAGE 12:39:49.661 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:50.372
+!MESSAGE 12:39:49.873 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:50.632
+!MESSAGE 12:39:50.375 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:50.633
+!MESSAGE 12:39:50.631 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 717
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:51.369
+!MESSAGE 12:39:50.869 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 718
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:51.885
+!MESSAGE 12:39:51.884 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 721
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:52.029
+!MESSAGE 12:39:52.028 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 722
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:52.539
+!MESSAGE 12:39:52.532 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:52.541
+!MESSAGE 12:39:52.539 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:52.747
+!MESSAGE 12:39:52.745 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:53.974
+!MESSAGE 12:39:53.264 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:53.975
+!MESSAGE 12:39:53.264 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:54.251
+!MESSAGE 12:39:54.135 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:54.895
+!MESSAGE 12:39:54.892 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:54.899
+!MESSAGE 12:39:54.898 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:54.935
+!MESSAGE 12:39:54.924 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:54.988
+!MESSAGE 12:39:54.965 [pool-2-thread-87] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:55.029
+!MESSAGE 12:39:55.018 [pool-13-thread-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Invalidate AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:55.117
+!MESSAGE 12:39:55.116 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 735
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:55.195
+!MESSAGE 12:39:55.194 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 736
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:55.347
+!MESSAGE 12:39:55.345 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 737
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:55.657
+!MESSAGE 12:39:55.646 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 739
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:55.965
+!MESSAGE 12:39:55.964 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 741
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:56.476
+!MESSAGE 12:39:56.475 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:56.508
+!MESSAGE 12:39:56.481 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:56.789
+!MESSAGE 12:39:56.787 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - completion request arrived: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:57.639
+!MESSAGE 12:39:57.024 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Parsed successfully CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:57.640
+!MESSAGE 12:39:57.025 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:58.131
+!MESSAGE 12:39:58.129 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Started parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:58.138
+!MESSAGE 12:39:58.134 [pool-4-thread-23] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:39:58.139
+!MESSAGE 12:39:58.136 [pool-2-thread-88] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:40:42.888
+!MESSAGE 12:39:58.957 [pool-2-thread-88] INFO  o.s.i.v.boot.app.SpringSymbolIndex - Update document [didSave event]: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:43:00.565
+!MESSAGE 12:42:47.591 [pool-2-thread-89] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 2ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:44:18.116
+!MESSAGE 12:44:16.613 [pool-2-thread-91] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:44:18.116
+!MESSAGE 12:44:18.115 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - doc save event: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:44:18.320
+!MESSAGE 12:44:18.119 [Simple-Language-Server main thread] INFO  o.s.i.v.boot.app.SpringSymbolIndex - Update document [file changed]: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:44:57.517
+!MESSAGE 12:44:50.036 [pool-2-thread-92] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:03.081
+!MESSAGE 12:45:03.079 [pool-2-thread-91] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:05.561
+!MESSAGE 12:45:05.538 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 745
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:06.054
+!MESSAGE 12:45:06.053 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:10.580
+!MESSAGE 12:45:06.058 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:10.944
+!MESSAGE 12:45:10.598 [pool-2-thread-92] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:10.945
+!MESSAGE 12:45:10.943 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 748
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:11.215
+!MESSAGE 12:45:11.103 [pool-2-thread-92] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:11.581
+!MESSAGE 12:45:11.579 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - completion request arrived: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:12.518
+!MESSAGE 12:45:11.723 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:12.519
+!MESSAGE 12:45:12.517 [pool-13-thread-1] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - change arrived: 750
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:13.034
+!MESSAGE 12:45:13.032 [pool-4-thread-24] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:13.034
+!MESSAGE 12:45:13.032 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:20.918
+!MESSAGE 12:45:19.078 [pool-2-thread-92] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:22.646
+!MESSAGE 12:45:20.983 [pool-2-thread-92] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:45:22.647
+!MESSAGE 12:45:21.956 [Simple-Language-Server main thread] INFO  o.s.i.v.boot.app.SpringSymbolIndex - Update document [file changed]: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:46:31.372
+!MESSAGE 12:46:31.371 [pool-2-thread-91] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:48:20.946
+!MESSAGE 12:48:10.215 [pool-2-thread-93] INFO  o.s.i.v.c.l.u.SimpleTextDocumentService - hover computation done in 0ms
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-06 12:58:06.856
+!MESSAGE [Info] Document is null for editor: Program.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-06 12:58:06.857
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:58:10.700
+!MESSAGE 12:54:53.231 [pool-2-thread-96] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_8/src/com/cdac/main/Program.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:58:10.704
+!MESSAGE 12:58:10.698 [Simple-Language-Server main thread] INFO  o.s.i.v.boot.app.SpringSymbolIndex - project deleted event: Day8_6
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 12:58:16.773
+!MESSAGE 12:58:16.770 [Simple-Language-Server main thread] INFO  o.s.i.v.boot.app.SpringSymbolIndex - project deleted event: Day8_8
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:10:52.775
+!MESSAGE 12:58:26.222 [Simple-Language-Server main thread] INFO  o.s.i.v.c.l.u.SimpleWorkspaceService - file deleted event: [file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_7/bin/com/cdac/main/GetTable.class, file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_7/bin/com/cdac/main/Program.class, file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/Day8_7/src/com/cdac/main/Program.java]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:07.150
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:07.152
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:07.153
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:07.154
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:08.852
+!MESSAGE 13:11:08.790 [Simple-Language-Server main thread] INFO  o.s.i.v.boot.app.SpringSymbolIndex - project changed event: SpringDemo1
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:09.245
+!MESSAGE 13:11:08.873 [pool-5-thread-1] INFO  o.s.i.v.b.j.utils.SpringIndexerJava - scan java files, AST parse, chunk 0 for files: 1
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:09.274
+!MESSAGE 13:11:09.272 [pool-5-thread-1] INFO  o.s.i.v.b.j.utils.SpringIndexerJava - reconciling stats - timer: 82
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:09.898
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:09.899
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:09.900
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:09.901
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:09.987
+!MESSAGE 13:11:09.965 [pool-5-thread-1] INFO  o.s.i.v.b.j.u.SpringFactoriesIndexer - scan factories files for symbols for project: SpringDemo1 - no. of files: 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:10.883
+!MESSAGE 13:11:10.022 [pool-5-thread-1] INFO  o.s.i.v.b.j.utils.SpringIndexerJava - scan java files restored cached dependency data: 0 - no. of cached dependencies: {}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:10.884
+!MESSAGE 13:11:10.883 [Project-Reconciler-9] INFO  o.s.i.v.boot.app.RestTemplateFactory - Env var https_proxy: null
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:10.885
+!MESSAGE 13:11:10.883 [Project-Reconciler-9] INFO  o.s.i.v.boot.app.RestTemplateFactory - Proxy URL from env: null
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:11.117
+!MESSAGE 13:11:11.116 [Project-Reconciler-9] INFO  o.s.i.v.boot.app.RestTemplateFactory - Env var https_proxy: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:11.281
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:11.282
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:11.283
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-03-06 13:11:11.284
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:11:11.523
+!MESSAGE 13:11:11.519 [Project-Reconciler-9] INFO  o.s.i.v.b.v.BootVersionValidationEngine - validating Spring Boot version on project: SpringDemo1 done in 2215ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:03.145
+!MESSAGE 13:11:23.075 [pool-5-thread-1] INFO  o.s.i.v.b.j.u.SpringFactoriesIndexer - scan factories files for symbols for project: SpringDemo1 - no. of files: 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:03.146
+!MESSAGE 13:11:23.581 [Project-Reconciler-9] INFO  o.s.i.v.b.v.BootVersionValidationEngine - validating Spring Boot version on project: SpringDemo1 done in 0ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:03.260
+!MESSAGE 13:12:03.150 [pool-2-thread-100] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:03.272
+!MESSAGE 13:12:03.270 [pool-4-thread-25] INFO  o.s.i.v.b.j.u.CompilationUnitCache - Finished parsing CU for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:03.273
+!MESSAGE 13:12:03.270 [pool-2-thread-100] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:03.275
+!MESSAGE 13:12:03.270 [pool-2-thread-98] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:03.277
+!MESSAGE 13:12:03.275 [pool-2-thread-97] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: end work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:12.135
+!MESSAGE 13:12:03.647 [Reconciler-1] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:12:12.136
+!MESSAGE 13:12:12.134 [pool-2-thread-101] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:30:27.852
+!MESSAGE 13:30:27.830 [pool-2-thread-104] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: work item submitted for doc file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-06 13:30:27.853
+!MESSAGE 13:30:27.850 [pool-2-thread-104] INFO  o.s.i.v.b.j.u.CompilationUnitCache - CU Cache: start work on AST for file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-06 13:30:29.757
+!MESSAGE [Info] Document is null for editor: SpringDemo1Application.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-06 13:30:29.758
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///C:/Users/HP/Desktop/Training%20Session/PGCP-AI%20Feb%202026/OOPJ%20Contents%20Day-8/Day8/SpringDemo1/src/main/java/com/cdac/main/SpringDemo1Application.java

@@ -1,0 +1,19 @@
+package com.movie.managers;
+
+public abstract class MovieManager {
+	
+	public abstract void addMovie();
+	public abstract void viewAllMovies();
+	public abstract void searchMovieByID();
+	public abstract void updateMovie();
+	public abstract void deleteMovie();
+	public abstract void sortMoviesByTitle();
+	public abstract void sortMoviesByDirector();
+	public abstract void sortMoviesByRating();
+	public abstract void sortMoviesByReleaseYear();
+	
+	
+	
+	
+
+}

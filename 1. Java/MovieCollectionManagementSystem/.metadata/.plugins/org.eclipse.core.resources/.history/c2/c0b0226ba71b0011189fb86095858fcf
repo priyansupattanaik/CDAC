@@ -1,0 +1,14 @@
+package com.movie.managers;
+
+public class MovieManager {
+
+	public void addMovies() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+		
+	}
+	
+	

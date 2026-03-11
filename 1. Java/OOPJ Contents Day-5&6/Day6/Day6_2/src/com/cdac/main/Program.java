@@ -1,0 +1,36 @@
+package com.cdac.main;
+
+
+//Concept of Singleton class
+class Test			
+{
+
+	private static Test t1;
+	
+	private Test()
+	{
+	}
+	
+	public static Test GetTest()
+	{
+		
+		if(t1==null)
+		{
+			t1=new Test();
+		}
+		return t1;
+	}
+	
+}
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Test t1=Test.GetTest();
+		Test t2=Test.GetTest();
+		
+		System.out.println(t1.hashCode());
+		System.out.println(t2.hashCode());
+	}
+}

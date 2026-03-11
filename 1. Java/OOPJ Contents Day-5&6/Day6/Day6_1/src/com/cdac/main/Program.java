@@ -1,0 +1,46 @@
+package com.cdac.main;
+
+final class Test			//Immutable Class
+{
+	private int Num1;
+	private int Num2;
+	
+	public Test() {
+		super();
+	}
+	
+	public Test(int num1, int num2) {
+
+		Num1 = num1;
+		Num2 = num2;
+	}
+	
+	public int getNum1() {
+		return Num1;
+	}
+	public int getNum2() {
+		return Num2;
+	}
+
+	@Override
+	public String toString() {
+		return "Num1=" + Num1 + ", Num2=" + Num2;
+	}
+	
+}
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Test t1=new Test(100,200);		//Immutable Instance
+		
+		Test t2=new Test(3,4);			//
+		
+		System.out.println(t1);
+		
+		//t1.Num1=1200;			//NOT OK, as t1 is immutable instance
+
+	}
+
+}

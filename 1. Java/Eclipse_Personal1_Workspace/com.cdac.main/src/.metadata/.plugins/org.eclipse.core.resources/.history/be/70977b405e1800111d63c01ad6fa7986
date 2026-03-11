@@ -1,0 +1,48 @@
+package com.cdac.main;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
+class Test
+{
+	private int Num1;
+	private int Num2;
+	
+	
+	public Test()
+	{
+		
+	}
+	
+	private Test(int Num1, int Num2)
+	{
+		this.Num1=Num1;
+		this.Num2=Num2;
+	}
+
+	public int getNum1() {
+		return Num1;
+	}
+
+	public void setNum1(int num1) {
+		Num1 = num1;
+	}
+
+	public int getNum2() {
+		return Num2;
+	}
+
+	public void setNum2(int num2) {
+		Num2 = num2;
+	}
+	
+	
+}
+
+public class Program {
+	
+	public static void main(String[] args) {
+	}
+}

@@ -1,0 +1,75 @@
+package com.cdac.main;
+
+import java.util.Scanner;
+
+import com.cdac.Mangers.EmployeeManager;
+
+class Person
+{
+	String Name;
+	int Age;
+	float Height;
+	int MobileNo;
+	String EmailId;
+	
+	void AcceptRecord()
+	{
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter Name: ");
+		this.Name=sc.next();
+		System.out.println("Enter Age: ");
+		this.Age=sc.nextInt();
+		System.out.println("Enter Hieght: ");
+		this.Height=sc.nextFloat();
+		System.out.println("Enter Mobile No: ");
+		this.MobileNo=sc.nextInt();
+		//sc.next();
+		System.out.println("Enter Email: ");
+		this.EmailId=sc.next();
+		sc.nextLine();
+		//sc.close();
+	}
+	
+	void PrintRecord()
+	{
+		System.out.println("Name: "+this.Name+" Phone No: "+this.MobileNo);
+	}
+	
+}
+class Student extends Person
+{
+	int RollNo;
+	float Marks;
+	
+	void AcceptRecord()
+	{
+		super.AcceptRecord();
+		Scanner sc1=new Scanner(System.in);
+		System.out.println("Enter RollNo: ");
+		this.RollNo=sc1.nextInt();
+		System.out.println("Enter Marks: ");
+		this.Marks=sc1.nextFloat();
+		sc1.close();
+	}
+	
+	void PrintRecord()
+	{
+		super.PrintRecord();
+		System.out.println("Roll No: "+this.RollNo+" Marks: "+this.Marks);
+	}
+}
+
+public class Program {
+
+	public static void main(String[] args) {
+		EmployeeManager em=new EmployeeManager();
+		em.PrintEmployees();
+		System.out.println("------------------------------------------------------");
+		em.AddEmployee();
+		System.out.println("------------------------------------------------------");
+		em.PrintEmployees();
+
+	}
+
+}

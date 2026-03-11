@@ -1,0 +1,33 @@
+package com.cdac.main;
+
+class GetTable
+{
+	int Num1;
+	
+	public GetTable(int x)
+	{
+		this.Num1=x;
+	}
+	public void PrintTable()
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(this.Num1+" * "+i+" = "+ (i*this.Num1));
+		}
+	}
+}
+
+
+public class Program {
+
+	public static void main(String[] args)  {
+		
+			GetTable t1=new GetTable(10);
+			GetTable t2=new GetTable(20);
+			
+			t1.PrintTable();
+			t2.PrintTable();
+		
+	}
+
+}

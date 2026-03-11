@@ -1,0 +1,8 @@
+package com.movie.managers;
+
+public abstract class MovieManager {
+	
+
+	
+
+}

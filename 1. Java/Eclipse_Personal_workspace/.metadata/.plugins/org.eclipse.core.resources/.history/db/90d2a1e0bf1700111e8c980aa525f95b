@@ -1,0 +1,77 @@
+package com.cdac.managers;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+import com.cdac.models.Product;
+
+interface IManager {
+    void AddProduct();
+}
+
+public class ProductManager implements IManager {
+    
+    ArrayList<Product> plist;
+    
+    public ProductManager() {
+        plist = new ArrayList<Product>();
+        
+        plist.add(new Product(1001, "Laptop", "Electronics", 55000.00, 10, "TechDistributor"));
+        plist.add(new Product(1005, "Mouse", "Electronics", 500.00, 50, "PeripheralSupplier"));
+        plist.add(new Product(1004, "Desk", "Furniture", 8000.00, 15, "FurnitureMart"));
+        plist.add(new Product(1003, "Notebook", "Stationery", 50.00, 200, "StationeryWorld"));
+        plist.add(new Product(1002, "Printer", "Electronics", 12000.00, 8, "OfficeSolutions"));
+    }
+    
+    public void AddProduct() {
+        Scanner sc = new Scanner(System.in);
+        Product p = new Product();
+        
+        System.out.println("Enter Product Id: ");
+        p.setProductId(sc.nextInt());
+        
+        System.out.println("Enter Product Name: ");
+        p.setProductName(sc.next());
+        
+        System.out.println("Enter Product Category: ");
+        p.setCategory(sc.next());
+        
+        System.out.println("Enter Product Price: ");
+        p.setPrice(sc.nextDouble());
+        
+        System.out.println("Enter Product Quantity: ");
+        p.setQuantity(sc.nextInt());
+        
+        System.out.println("Enter Supplier Name: ");
+        p.setSupplierName(sc.next());
+        
+        plist.add(p);
+        System.out.println("Product Record Added Successfully");
+    }
+    
+    public void PrintAllRecords() {
+        plist.stream().forEach(p -> System.out.println(p));
+    }
+    
+    public void SortRecordByName() {
+        plist.stream()
+             .sorted((p1, p2) -> p1.getProductName().compareTo(p2.getProductName()))
+             .forEach(System.out::println);
+    }
+    
+    public void SortByProductId() {
+        Collections.sort(plist, (p1, p2) -> Integer.compare(p1.getProductId(), p2.getProductId()));
+        for(Product p : plist) {
+            System.out.println(p);
+        }
+    }
+    
+    public List<Product> GetRecordWherePriceGreaterThan1000() {
+        return plist.stream()
+                   .filter(p -> p.getPrice() > 1000)
+                   .collect(Collectors.toList());
+    }
+}

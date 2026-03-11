@@ -1,0 +1,36 @@
+package com.cdac.models;
+
+public class Patient {
+	
+	int PatientId;
+	String Name;
+	String Disease;
+	String BloodGroup;
+	int WardNo;
+	int Age;
+	String DoctorName;
+	
+	public Patient() {
+		super();
+	}
+
+	public Patient(int patientId, String name, String disease, String bloodGroup, int wardNo, int age,
+			String doctorName) {
+		super();
+		PatientId = patientId;
+		Name = name;
+		Disease = disease;
+		BloodGroup = bloodGroup;
+		WardNo = wardNo;
+		Age = age;
+		DoctorName = doctorName;
+	}
+
+	@Override
+	public String toString() {
+		return "PatientId=" + PatientId + ", Name=" + Name + ", Disease=" + Disease + ", BloodGroup="
+				+ BloodGroup + ", WardNo=" + WardNo + ", Age=" + Age + ", DoctorName=" + DoctorName;
+	}
+	
+	
+}

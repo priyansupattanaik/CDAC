@@ -1,0 +1,5 @@
+package com.cdac.managers;
+
+public class PatientManager {
+
+}

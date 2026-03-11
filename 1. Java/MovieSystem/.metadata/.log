@@ -1,0 +1,117 @@
+!SESSION 2026-03-09 15:26:26.554 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-03-09 15:26:29.982
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-03-09 15:27:02.011
+!MESSAGE Logback config file: D:\CDAC\MovieSystem\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-03-09 15:27:08.014
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ircpr'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-09 15:27:08.059
+!MESSAGE [Info] Starting language server with binary lsp agent.
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-09 15:27:08.063
+!MESSAGE [Info] Found native binary in fragment bundle: com.microsoft.copilot.eclipse.core.agent.win32
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-09 15:27:08.099
+!MESSAGE [Info] Binary agent started successfully.
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:27:11.681
+!MESSAGE [Info]	[lsp] GitHub Copilot Language Server 1.412.0 initialized
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-03-09 15:27:11.787
+!MESSAGE [Warning]	[McpAutoApproveService] Invalid McpAutoApproveService config, resetting to empty undefined
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:27:11.789
+!MESSAGE [Info]	[certificates] Removed 10 expired certificates
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:27:11.805
+!MESSAGE [Info]	[default] Policy watcher started for GitHub Copilot Plugin
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:27:12.216
+!MESSAGE [Info]	[GithubAvailableEmbeddingTypes] Got embeddings. Primary: metis-1024-I16-Binary. Deprecated: 
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:27:12.684
+!MESSAGE [Info]	[AutoModelService] Auto model cache cleared due to token update
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:27:12.687
+!MESSAGE [Info]	[CopilotMCP] MCP state changed from false to true
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:27:12.688
+!MESSAGE [Info]	[Semantic Search] Semantic search is disabled { reason: 'watchedFiles capability is not available' }
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-03-09 15:27:12.937
+!MESSAGE [Warning]	[McpAutoApproveService] Invalid McpAutoApproveService config, resetting to empty undefined
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:00.767
+!MESSAGE [Info]	[fetchCompletions] Request ffdba288-033b-4fd9-bfcf-745d37717bfd at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 650.8557000000001ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:03.608
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:03.975
+!MESSAGE [Info]	[fetchCompletions] Request ae6b34fd-1800-4ecf-b0d4-4154701654f9 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 344.51380000000063ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:04.064
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:04.351
+!MESSAGE [Info]	[fetchCompletions] Request 713b48cb-129a-48da-a18f-83d6ab47f9d9 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 248.15099999999802ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-03-09 15:29:04.403
+!MESSAGE [Error]	[AsyncCompletionManager] [713b48cb-129a-48da-a18f-83d6ab47f9d9] Request errored with AbortError: The operation was aborted.
+    at AbortSignal.abortHandler (C:\snapshot\copilot-intellij\node_modules\@adobe\helix-fetch\src\fetch\index.js:106:17)
+    at AbortSignal.[nodejs.internal.kHybridDispatch] (node:internal/event_target:845:20)
+    at AbortSignal.dispatchEvent (node:internal/event_target:778:26)
+    at runAbort (node:internal/abort_controller:486:10)
+    at abortSignal (node:internal/abort_controller:457:3)
+    at AbortController.abort (node:internal/abort_controller:505:5)
+    at C:\snapshot\copilot-intellij\lib\src\networking.ts:105:19
+    at Urt.invoke (C:\snapshot\copilot-intellij\node_modules\vscode-jsonrpc\lib\common\events.js:55:39)
+    at t.fire (C:\snapshot\copilot-intellij\node_modules\vscode-jsonrpc\lib\common\events.js:117:36)
+    at qbe.cancel (C:\snapshot\copilot-intellij\node_modules\vscode-jsonrpc\lib\common\cancellation.js:41:31) {
+  type: 'aborted',
+  _name: 'AbortError'
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:04.677
+!MESSAGE [Info]	[fetchCompletions] Request 05a9435b-da3b-4c92-a0e4-bcf3036d6132 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 277.46510000000126ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:04.749
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:05.026
+!MESSAGE [Info]	[fetchCompletions] Request 8c273c76-0901-4a0a-88b2-0130f1f1eda9 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 249.87300000000687ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:05.113
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [null]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:05.717
+!MESSAGE [Info]	[fetchCompletions] Request ee1e9a28-c9a8-4389-bb21-b19f52ca4c8d at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 281.94770000000426ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:05.790
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:06.051
+!MESSAGE [Info]	[fetchCompletions] Request 32a92c13-201d-4e43-ab70-593e1f8d7fe5 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 233.76380000000063ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-03-09 15:29:06.179
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [null]
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-09 15:32:42.671
+!MESSAGE [Info] Document is null for editor: Movie.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-03-09 15:32:42.671
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///D:/CDAC/MovieSystem/MovieCollectionSystem/src/com/movie/models/Movie.java

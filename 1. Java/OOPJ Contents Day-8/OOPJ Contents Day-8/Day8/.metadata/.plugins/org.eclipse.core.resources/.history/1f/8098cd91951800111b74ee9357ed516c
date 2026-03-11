@@ -1,0 +1,67 @@
+package com.cdac.main;
+
+
+class Test extends Thread {
+	public void run() {
+		for (int i = 0; i < 5; i++)
+		{
+		System.out.println(Thread.currentThread().getName() + " " + i);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		}
+	}
+}
+
+class Test2 implements Runnable {
+	public void run() {
+		for (int i = 0; i < 5; i++)
+		{
+		System.out.println(Thread.currentThread().getName() + " " + i);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		}
+	}
+}
+
+public class Program {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Current Thread Id: "+Thread.currentThread().getId());
+		System.out.println("Current Thread Name: "+Thread.currentThread().getName());
+		System.out.println("Current Thread Priority: "+Thread.currentThread().getPriority());
+		System.out.println("Current Thread GroupName: "+Thread.currentThread().getThreadGroup().getName());
+	}
+	
+	public static void main2(String[] args) {
+		
+		Thread t1 = new Thread(new Test2());
+		Thread t2 = new Thread(new Test2());
+		
+		t1.setName("Thread 1");
+		t2.setName("Thread 2");
+		
+		t1.start();
+		t2.start();
+	}
+
+	public static void main1(String[] args) {
+		
+		Thread t1 = new Test();
+		Thread t2 = new Test();
+		
+		t1.setName("Thread 1");
+		t2.setName("Thread 2");
+		
+		t1.start();
+		t2.start();
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.cdac.main;
+
+
+public class Program
+{
+	
+	
+	public static void Show(int Num1)
+	{
+		System.out.println("Number is: "+Num1);
+	}
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

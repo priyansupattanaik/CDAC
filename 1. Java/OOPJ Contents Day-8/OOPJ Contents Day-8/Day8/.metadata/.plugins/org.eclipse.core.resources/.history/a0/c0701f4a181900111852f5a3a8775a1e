@@ -1,0 +1,45 @@
+package com.cdac.main;
+
+class Test extends Thread
+{
+
+	@Override
+	public void run() {
+		
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("Thread Name: "+Thread.currentThread().getName()+" i: "+i);
+			try {
+				Thread.currentThread().sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+}
+
+
+public class Program {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		//sThread.currentThread().setPriority(10);
+		Thread.currentThread().sleep(1000);
+		System.out.println("Main Starts here");
+		
+		Thread t1=new Test();
+		
+		t1.setName("Th1");
+		t1.setPriority(10);
+		t1.start();
+		
+		
+		System.out.println("Main Ends here");
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+D:\CDAC\Eclipse_StudentCourseRegistration\.metadata\.plugins\org.eclipse.jdt.core
+2012028451.index
+430558844.index
+1865797976.index
+4198128373.index

@@ -1,0 +1,30 @@
+package com.cdac.classes;
+
+import com.cdac.interfaces.IShape;
+
+public class Shape implements IShape
+{
+	public double Area;
+	public double Perimeter;
+	
+	@Override
+	public void CalculateArea() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void CalculatePerimeter() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void PrintArea() {
+		System.out.println("Area: "+this.Area);
+		
+	}
+	@Override
+	public void PrintPerimeter() {
+		System.out.println("Perimeter: "+this.Perimeter);
+		
+	}
+}

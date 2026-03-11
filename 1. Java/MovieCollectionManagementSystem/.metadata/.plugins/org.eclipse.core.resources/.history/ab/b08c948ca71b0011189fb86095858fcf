@@ -1,0 +1,39 @@
+package com.movie.managers;
+
+public class MovieManager {
+
+	public void addMovies() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void viewMovies() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void searchMovie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateMovie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteMovie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sortByTitle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+		
+	}
+	
+	

@@ -1,0 +1,29 @@
+package com.cdac.main;
+
+class Person
+{
+	String Name;
+	int Age;
+	float Height;
+	long MobileNo;
+	String EmailId;
+	
+	void PrintRecord()
+	{
+		System.out.println("Name: "+this.Name+" Phone No: "+this.MobileNo);
+	}
+	
+}
+class Student extends Person
+{
+	
+}
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

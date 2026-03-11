@@ -1,0 +1,5 @@
+package com.cdac.interfaces;
+
+public interface IShape {
+
+}

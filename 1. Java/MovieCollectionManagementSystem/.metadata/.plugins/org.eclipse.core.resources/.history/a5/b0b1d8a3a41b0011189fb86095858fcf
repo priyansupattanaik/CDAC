@@ -1,0 +1,61 @@
+package com.movie.main;
+
+import java.util.Scanner;
+
+public class Program {
+	
+	public static void main(String [] args) {
+		
+		Scanner sc = new Scanner(System.in);
+				
+				int choice = sc.nextInt();
+				
+				switch(choice) {
+				case 1:
+					System.out.println("1) Add Movie");
+					break;
+					case 2:
+						System.out.println("2) View All Movies");
+						break;
+						case 3:
+							System.out.println("3) Search Movie by ID");
+							break;
+							case 4:
+								System.out.println("4) Update Movie");
+								break;
+								case 5:
+									System.out.println("5) Delete Movie");
+									break;
+									case 6:
+										System.out.println("6) Sort Movies by Title");
+										break;
+										case 7:
+											System.out.println("7) Sort Movies by Director");
+											break;
+											case 8:
+												System.out.println("8) Sort Movies by Rating");
+												break;
+												case 9:
+													System.out.println("9) Sort Movies by Release Year");
+													break;
+													case 10:
+														
+														System.out.println("10) Exit");
+														sc.close();
+														System.exit(0);
+														break;
+														default:
+															System.out.println("Invalid choice. Please try again.");
+				
+			
+				
+
+						
+				}
+				
+		
+	}
+
+	
+
+}

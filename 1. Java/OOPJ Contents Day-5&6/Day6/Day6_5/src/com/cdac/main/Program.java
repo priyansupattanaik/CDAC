@@ -1,0 +1,39 @@
+package com.cdac.main;
+
+
+class Test<T>		//Generic Class
+{
+	T Value1;
+	T Value2;
+	
+	
+	public Test(T Value1, T Value2)
+	{
+		this.Value1=Value1;
+		this.Value2=Value2;
+	}
+	
+	public void ShowValue()
+	{
+		System.out.println("Value1: "+this.Value1+" Value2: "+this.Value2);
+	}
+}
+
+public class Program
+{
+	public static void main(String[] args) {
+		
+		Test t1=new Test(100,200);
+		
+		t1.ShowValue();
+		
+		Test t2=new Test("Malkeet", "Singh");
+		
+		t2.ShowValue();
+		
+		
+		Test t3=new Test("Sandeep", true);
+		
+		t3.ShowValue();
+	}
+}

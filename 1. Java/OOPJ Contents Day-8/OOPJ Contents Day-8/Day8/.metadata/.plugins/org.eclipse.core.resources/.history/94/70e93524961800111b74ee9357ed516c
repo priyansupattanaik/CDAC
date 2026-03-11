@@ -1,0 +1,35 @@
+class Sample{
+    public Sample( ) {
+    System.out.println("Inside constructor of    "+this.getClass().getSimpleName());
+    }
+    public void print( ) {
+    System.out.println("Inside print method of    "+this.getClass().getSimpleName());
+    }
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Inside finalize method of    "+this.getClass().getSimpleName());
+        Thread thread = Thread.currentThread();
+        String name = thread.getName();
+        System.out.println("Thread Name : "+name);
+        int priority= thread.getPriority();
+        System.out.println("Thread Priority : "+priority);
+        ThreadGroup group = thread.getThreadGroup();
+        System.out.println("Thread Group : "+group.getName());
+        State state = thread.getState();
+        System.out.println("Thread State : "+state.name());
+        boolean type = thread.isDaemon();
+        System.out.println("Thread Type : "+( type ? "Daemon
+        Thread" : "User Thread") );
+        boolean status = thread.isAlive();
+        System.out.println("Thread Status : "+( status ? "Alive" :
+        "Dead") );
+    }
+ }
+    public static void main1(String[] args) {
+    Sample sample = null;
+    sample = new Sample();
+    sample.print();
+    sample = null;
+    //System.gc(); //To Call inidicate JVM to run Garbage Collector
+    Runtime.getRuntime().gc();
+    }

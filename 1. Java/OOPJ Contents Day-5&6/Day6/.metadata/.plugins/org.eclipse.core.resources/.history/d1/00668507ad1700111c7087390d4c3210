@@ -1,0 +1,23 @@
+package com.cdac.managers;
+
+import java.util.ArrayList;
+
+import com.cdac.models.Patient;
+
+public class PatientManager {
+	
+	ArrayList<Patient> plist;
+	
+	public PatientManager()
+	{
+		plist=new ArrayList<Patient>();
+		
+		plist.add(new Patient(1001, "Sahil", "Fever", "A+", 201, 24, "Asthana"));
+		plist.add(new Patient(1005, "Apple", "Injury", "BA+", 301, 1, "Orange"));
+		plist.add(new Patient(1004, "Scooty", "Tyre Gayab", "CC", 433, 21, "Hero Handa"));
+		plist.add(new Patient(1003, "Test A", "Cold", "B+", 202, 37, "Anjali"));
+		plist.add(new Patient(1002, "Sushi", "Headache", "O", 301, 45, "Munna"));
+		
+	}
+
+}

@@ -1,0 +1,58 @@
+package com.cdac.main;
+
+import java.util.Scanner;
+
+import com.cdac.managers.PatientManager;
+import com.cdac.models.Patient;
+
+public class Program {
+
+	public static void main(String[] args) 
+	{
+
+		int choice;
+		Scanner sc=new Scanner(System.in);
+		
+		PatientManager pm=new PatientManager();
+		
+		
+		do
+		{
+			System.out.println("======================Patient Management System======================");
+			System.out.println("Press 1 to Add ");
+			System.out.println("Press 2 to View All Patient");
+			System.out.println("Press 3 to Sort By Name");
+			System.out.println("Press 4 to Patient Id");
+			System.out.println("Press 5 to Exit the Program");
+			System.out.println("=======================================================================");
+			System.out.println("Enter you choice");
+			choice=sc.nextInt();
+			
+			switch (choice) 
+			{
+			case 1:
+				pm.AddPatient();
+				break;
+			case 2:
+				pm.PrintAllRecords();
+				break;
+			case 3:
+				pm.SortRecordByName();
+				break;
+			case 4:
+				pm.SortByPatientId();
+				break;
+			case 5:
+				System.out.println("Exiting The Program! Bye Bye");
+				break;
+			default:
+				System.out.println("Invalid Input");
+				break;
+			}
+		}while(choice!=5);
+		
+		
+		
+	}
+
+}

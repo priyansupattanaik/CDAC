@@ -1,0 +1,76 @@
+package com.cdac.main;
+
+
+class BankAccount
+{
+	float Balance;
+	
+	
+	public BankAccount(float Balance)
+	{
+		this.Balance=Balance;
+	}
+	
+	public void Credit(float Amount)
+	{
+		this.Balance=this.Balance+Amount;
+		System.out.println("Credit Done: "+this.Balance);
+		System.out.println("Raising Notify");
+		notify();//It will notify single from waiting
+	}
+	public void Debit(float Amount) throws InterruptedException
+	{
+		if(this.Balance>Amount)
+		{
+			this.Balance=this.Balance-Amount;
+			System.out.println("Debit Done: "+this.Balance);
+		}
+		System.out.println("Waiting for Credit");
+		
+		wait();
+		
+		
+	}
+}
+
+public class Program {
+
+	public static void main(String[] args) throws InterruptedException  {
+		
+			BankAccount b=new BankAccount(5000);
+			
+			Runnable r1=new Runnable() {
+				
+				@Override
+				public void run() {
+					b.Debit(10000);
+					
+				}
+			};
+			
+			Runnable r2=new Runnable() {
+				
+				@Override
+				public void run() {
+					b.Credit(5000);
+					
+				}
+			};
+			
+			Thread th1=new Thread(r1);
+			Thread th2=new Thread(r2);
+			
+			th1.setName("Th-1");
+			th2.setName("Th-2");
+			
+			th1.start();
+			th2.start();
+			
+			th1.join();
+			th2.join();
+			
+			System.out.println("Balance: "+b.Balance);
+		
+	}
+
+}

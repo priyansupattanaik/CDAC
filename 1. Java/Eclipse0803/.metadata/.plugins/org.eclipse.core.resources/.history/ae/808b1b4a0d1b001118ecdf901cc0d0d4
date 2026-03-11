@@ -1,0 +1,42 @@
+package com.hospital.models;
+
+public abstract class Patient extends Person {
+	
+	private String disease;
+	private boolean isAdmitted;
+	private int assignedDoctorID;
+	public Patient(int personID, String name, int age, String gender, String disease, boolean isAdmitted,
+			int assignedDoctorID) {
+		super(personID, name, age, gender);
+		this.disease = disease;
+		this.isAdmitted = isAdmitted;
+		this.assignedDoctorID = assignedDoctorID;
+	}
+	public String getDisease() {
+		return disease;
+	}
+	public void setDisease(String disease) {
+		this.disease = disease;
+	}
+	public boolean isAdmitted() {
+		return isAdmitted;
+	}
+	public void setAdmitted(boolean isAdmitted) {
+		this.isAdmitted = isAdmitted;
+	}
+	public int getAssignedDoctorID() {
+		return assignedDoctorID;
+	}
+	public void setAssignedDoctorID(int assignedDoctorID) {
+		this.assignedDoctorID = assignedDoctorID;
+	}
+	@Override
+	public String toString() {
+		return "Patient [disease=" + disease + ", isAdmitted=" + isAdmitted + ", assignedDoctorID=" + assignedDoctorID
+				+ "]";
+	}
+	
+	
+	
+
+}

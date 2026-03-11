@@ -1,0 +1,82 @@
+package com.cdac.managers;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+import javax.swing.event.TableColumnModelListener;
+
+import com.cdac.models.Patient;
+
+public class PatientManager {
+	
+	ArrayList<Patient> plist;
+	
+	public PatientManager()
+	{
+		plist=new ArrayList<Patient>();
+		
+		plist.add(new Patient(1001, "Sahil", "Fever", "A+", 201, 24, "Asthana"));
+		plist.add(new Patient(1005, "Apple", "Injury", "BA+", 301, 1, "Orange"));
+		plist.add(new Patient(1004, "Scooty", "Tyre Gayab", "CC", 433, 51, "Hero Handa"));
+		plist.add(new Patient(1003, "Test A", "Cold", "B+", 202, 37, "Anjali"));
+		plist.add(new Patient(1002, "Sushi", "Headache", "O", 301, 55, "Munna"));
+		
+	}
+	
+	
+	public void AddPatient()
+	{
+		Scanner sc=new Scanner(System.in);
+		Patient p=new Patient();
+		System.out.println("Enter Patient Id: ");
+		p.setPatientId(sc.nextInt());
+		System.out.println("Enter Patient Name: ");
+		p.setName(sc.next());
+		System.out.println("Enter Patient Disease: ");
+		p.setDisease(sc.next());
+		System.out.println("Enter Patient Blood Group: ");
+		p.setBloodGroup(sc.next());
+		System.out.println("Enter Patient Ward No: ");
+		p.setWardNo(sc.nextInt());
+		System.out.println("Enter Patient Age: ");
+		p.setAge(sc.nextInt());
+		System.out.println("Enter Doctor Name: ");
+		p.setDoctorName(sc.next());
+		
+		plist.add(p);
+		
+		System.out.println("Patient Record Added Successfully");
+				
+	}
+	
+	public void PrintAllRecords()
+	{
+		plist.stream().forEach(p->System.out.println(p));
+	}
+
+	
+	public void SortRecordByName()
+	{
+		plist.stream().sorted((p1,p2)->p1.getName().compareTo(p2.getName())).forEach(System.out::println);
+	}
+	public void SortByPatientId()
+	{
+		Collections.sort(plist, (p1,p2)->Integer.compare(p1.getPatientId(), p2.getPatientId()));
+		
+		for(Patient p:plist)
+		{
+			System.out.println(p);
+		}
+	}
+	
+	
+	public List<Patient> GetRecordWhereAgeGr50()
+	{		
+	return plist.stream().filter(p->p.getAge()>50).collect(Collectors.toList());
+	}
+}

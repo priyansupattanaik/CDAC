@@ -1,0 +1,15 @@
+package com.cdac.main;
+
+import com.cdac.models.Patient;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Patient p1=new Patient();
+		
+		System.out.println(p1);
+
+	}
+
+}

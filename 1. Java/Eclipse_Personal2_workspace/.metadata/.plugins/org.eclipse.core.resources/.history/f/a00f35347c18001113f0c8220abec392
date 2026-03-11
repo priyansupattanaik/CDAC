@@ -1,0 +1,5 @@
+package com.inventory.managers;
+
+public class InventoryOperations {
+
+}

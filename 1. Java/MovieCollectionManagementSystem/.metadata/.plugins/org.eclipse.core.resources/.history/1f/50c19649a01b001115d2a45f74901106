@@ -1,0 +1,5 @@
+package com.movie.managers;
+
+public class MovieManager {
+
+}

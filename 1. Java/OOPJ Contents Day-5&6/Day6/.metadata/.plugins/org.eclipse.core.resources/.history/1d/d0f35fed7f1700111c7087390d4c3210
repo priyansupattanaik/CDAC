@@ -1,0 +1,30 @@
+package com.cdac.main;
+
+class Test			
+{
+
+	private Test t1;
+	
+	private Test()
+	{
+		t1=new Test();
+	}
+	
+
+	public Test GetTest()
+	{
+		
+		
+		return this.t1;
+	}
+	
+}
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

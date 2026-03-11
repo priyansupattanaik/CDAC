@@ -1,0 +1,36 @@
+public class ReflectionTest {
+    public static void main(String[] args) {
+        try {
+            
+            String text = "Hello Java";
+            
+           
+            Class c = text.getClass();
+            System.out.println("Class name: " + c.getName());
+            
+            System.out.println("\nSome methods String has:");
+            Method[] methods = c.getMethods();
+            
+            
+            for(int i = 0; i < 5; i++) {
+                System.out.println(" - " + methods[i].getName());
+            }
+            
+            // Try calling a method dynamically
+            Method m = c.getMethod("toUpperCase");
+            String result = (String) m.invoke(text);
+            System.out.println("\nCalling toUpperCase(): " + result);
+            
+            // Check if a field exists (just for demo)
+            try {
+                Field f = c.getField("length");
+                System.out.println("Found field: " + f.getName());
+            } catch(NoSuchFieldException e) {
+                System.out.println("Length is a method, not a field");
+            }
+            
+        } catch(Exception e) {
+            System.out.println("Something went wrong: " + e);
+        }
+    }
+}

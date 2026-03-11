@@ -1,0 +1,69 @@
+import java.lang.reflect.*;
+
+class Test {
+    private String name;
+    private int age;
+    
+    public Test() {
+        this.name = "null";
+        this.age = 0;
+    }
+    
+    public Test(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    public void displayInfo() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+    
+}
+
+public class ReflectionTest {
+    public static void main(String[] args) {
+        try {
+            Class<?> personClass = Class.forName("Person");
+            System.out.println("Class: " + personClass.getName());
+            
+            Test person = (Test) personClass.getDeclaredConstructor().newInstance();
+            
+            System.out.println("Constructors:");
+            Constructor<?>[] constructors = personClass.getDeclaredConstructors();
+            for (Constructor<?> c : constructors) {
+                System.out.println("  " + c);
+            }
+            
+            System.out.println("Methods:");
+            Method[] methods = personClass.getDeclaredMethods();
+            for (Method m : methods) {
+                System.out.println("  " + m.getName());
+            }
+            
+            System.out.println("Fields:");
+            Field[] fields = personClass.getDeclaredFields();
+            for (Field f : fields) {
+                System.out.println("  " + f.getName());
+            }
+            
+            Field nameField = personClass.getDeclaredField("name");
+            nameField.setAccessible(true);
+            nameField.set(person, "John");
+            
+            Field ageField = personClass.getDeclaredField("age");
+            ageField.setAccessible(true);
+            ageField.set(person, 25);
+            
+            System.out.println("\nAfter changing fields:");
+            person.displayInfo();
+            
+            Method secretMethod = personClass.getDeclaredMethod("secretMethod");
+            secretMethod.setAccessible(true);
+            System.out.println("Calling private method:");
+            secretMethod.invoke(person);
+            
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+    }
+}

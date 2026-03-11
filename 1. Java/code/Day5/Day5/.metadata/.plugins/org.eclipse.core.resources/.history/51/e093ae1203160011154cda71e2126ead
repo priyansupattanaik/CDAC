@@ -1,0 +1,105 @@
+package com.cdac.Mangers;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.cdac.models.Employee;
+
+public class EmployeeManager {
+	
+	ArrayList<Employee> elist=new ArrayList<Employee>();
+	
+	
+	public EmployeeManager()
+	{
+		elist.add(new Employee(101, "Sham", 4567.89f, "AI"));
+		elist.add(new Employee(102, "Ram", 4567.89f, "BDA"));
+		elist.add(new Employee(103, "Soham", 4567.89f, "DAC"));
+		elist.add(new Employee(104, "Aniket", 4567.89f, "AI"));
+	}
+	
+	
+	public void AddEmployee()
+	{
+		Employee e=new Employee();
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter EmpId: ");
+		e.EmpId=sc.nextInt();
+		System.out.println("Enter Name: ");
+		e.Name=sc.next();
+		System.out.println("Enter Salary: ");
+		//e.Salary=sc.nextFloat();
+		e.setSalary(sc.nextFloat());
+		System.out.println("Enter DeptName: ");
+		e.DeptName=sc.next();
+		
+		elist.add(e);
+		
+		System.out.println("Record Added Successfully");
+		
+		
+	}
+	
+	public void PrintEmployees()
+	{
+		for(Employee e:elist)
+		{
+			System.out.println(e);
+		}
+	}
+	
+	public void UpdateEmployee()
+	{
+		boolean flag=false;
+		int id;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter EmpId: ");
+		id=sc.nextInt();
+		
+		for(Employee e:elist)
+		{
+			if(e.EmpId==id)
+			{
+				flag=true;
+				System.out.println("Enter Name: ");
+				e.Name=sc.next();
+				System.out.println("Enter Salary: ");
+				//e.Salary=sc.nextFloat();
+				e.setSalary(sc.nextFloat());
+				System.out.println("Enter DeptName: ");
+				e.DeptName=sc.next();
+				System.out.println("Record Updated Successfully");
+				break;
+			}
+		}
+		if(flag==false)
+		{
+			System.out.println("Record Not Found");
+		}
+	}
+	public void DeleteEmployee()
+	{
+		boolean flag=false;
+		int id;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter EmpId: ");
+		id=sc.nextInt();
+		
+		for(Employee e:elist)
+		{
+			if(e.EmpId==id)
+			{
+				flag=true;
+				elist.remove(e);
+				System.out.println("Record Deleted Successfully");
+				break;
+			}
+		}
+		if(flag==false)
+		{
+			System.out.println("Record Not Found");
+		}
+	}
+
+}

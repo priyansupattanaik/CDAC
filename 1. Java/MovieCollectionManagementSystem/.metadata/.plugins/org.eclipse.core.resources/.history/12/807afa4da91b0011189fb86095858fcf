@@ -1,0 +1,8 @@
+package com.movie.exception;
+
+public class MovieNotFoundException extends Exception {
+
+    public BookNotFoundException(String message) {
+        super(message);
+    }
+}

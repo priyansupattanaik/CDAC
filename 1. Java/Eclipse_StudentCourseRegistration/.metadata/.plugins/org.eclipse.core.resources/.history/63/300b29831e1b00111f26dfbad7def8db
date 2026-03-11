@@ -1,0 +1,104 @@
+package com.university.models;
+
+import java.util.ArrayList;
+
+public class Professor extends Person {
+	
+	private int professorID;
+	private String department;
+	private String designation;
+	private String qualification;
+	private int experienceYears;
+	private String specialization;
+	private ArrayList<String> coursesTaught;
+	private double salary;
+	
+	public Professor(int personID, String name, String email, String phoneNumber, String address,
+			int professorID, String department, String designation, String qualification,
+			int experienceYears, String specialization, double salary) {
+		super(personID, name, email, phoneNumber, address);
+		this.professorID = professorID;
+		this.department = department;
+		this.designation = designation;
+		this.qualification = qualification;
+		this.experienceYears = experienceYears;
+		this.specialization = specialization;
+		this.coursesTaught = new ArrayList<>();
+		this.salary = salary;
+	}
+	
+	public int getProfessorID() {
+		return professorID;
+	}
+	
+	public void setProfessorID(int professorID) {
+		this.professorID = professorID;
+	}
+	
+	public String getDepartment() {
+		return department;
+	}
+	
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	
+	public String getDesignation() {
+		return designation;
+	}
+	
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	
+	public String getQualification() {
+		return qualification;
+	}
+	
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	
+	public int getExperienceYears() {
+		return experienceYears;
+	}
+	
+	public void setExperienceYears(int experienceYears) {
+		this.experienceYears = experienceYears;
+	}
+	
+	public String getSpecialization() {
+		return specialization;
+	}
+	
+	public void setSpecialization(String specialization) {
+		this.specialization = specialization;
+	}
+	
+	public ArrayList<String> getCoursesTaught() {
+		return coursesTaught;
+	}
+	
+	public void addCourseTaught(String courseCode) {
+		this.coursesTaught.add(courseCode);
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+	
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	@Override
+	public String getRole() {
+		return "Professor";
+	}
+	
+	@Override
+	public String getDepartment1() {
+		return this.department;
+	}
+
+}

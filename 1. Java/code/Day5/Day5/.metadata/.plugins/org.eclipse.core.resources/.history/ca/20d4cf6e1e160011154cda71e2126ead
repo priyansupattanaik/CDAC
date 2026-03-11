@@ -1,0 +1,33 @@
+package com.cdac.main;
+
+class InvalidAgeException extends Exception
+{
+	public InvalidAgeException(String msg)
+	{
+		super(msg);
+	}
+}
+public class Program {
+
+	
+	static void CheckAge(int Age) throws InvalidAgeException
+	{
+		if(Age<18)
+		{
+			//InvalidAgeException
+			
+			throw new InvalidAgeException("Age is less 18");
+		}
+		else
+		{
+			System.out.println("Your Voting Registartion has been done");
+		}
+	}
+	
+public static void main(String[] args) {
+	
+	int age=17;
+	CheckAge(age);
+
+	}
+}

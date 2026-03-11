@@ -1,0 +1,5 @@
+package com.university.managers;
+
+public class StudentManager {
+
+}

@@ -1,0 +1,29 @@
+package com.cdac.main;
+
+
+public class Program<T>
+{
+	
+	
+	public static void ShowNumber(int Num1)
+	{
+		System.out.println("Number is: "+Num1);
+	}
+	
+	public void ShowValue(T value)
+	{
+		System.out.println("Value is: "+value);
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Program.ShowNumber(100);
+		//Program.ShowNumber(100.78f);   //NOK OK
+		
+		
+		Program t1=new Program<>();
+		
+		t1.ShowValue(100);
+	}
+}

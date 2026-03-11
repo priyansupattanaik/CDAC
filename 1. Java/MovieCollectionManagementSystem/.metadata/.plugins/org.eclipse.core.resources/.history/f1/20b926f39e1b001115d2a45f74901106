@@ -1,0 +1,24 @@
+package com.movie.main;
+
+import java.util.Scanner;
+
+public class Program {
+	
+	public static void main(String [] args) {
+		
+		Scanner sc = new Scanner(System.in);
+				System.out.println("Add Movie");
+				System.out.println("View All Movies");
+				System.out.println("Search Movie by ID");
+				System.out.println("Update Movie");
+				System.out.println("Delete Movie");
+				System.out.println("Sort Movies by Director");
+				System.out.println("Sort Movies by Rating");
+				System.out.println("Sort MOvies by Release Year");
+				System.out.println("Exit");
+				
+				
+		
+	}
+
+}

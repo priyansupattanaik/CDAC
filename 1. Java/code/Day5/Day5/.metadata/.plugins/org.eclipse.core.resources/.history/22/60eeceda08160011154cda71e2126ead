@@ -1,0 +1,9 @@
+package com.cdac.classes;
+
+import com.cdac.interfaces.IShape;
+
+public class Shape implements IShape
+{
+	public double Area;
+	public double Perimeter;
+}

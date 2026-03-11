@@ -1,0 +1,21 @@
+package com.cdac.main;
+
+class GetTable
+{
+	public static void PrintTable(int x)
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(x+" * "+i+" = "+ (i*x));
+		}
+	}
+}
+
+
+public class Program {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+	}
+
+}

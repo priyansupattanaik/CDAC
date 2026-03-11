@@ -1,0 +1,33 @@
+package com.cdac.main;
+
+
+class Test extends Thread {
+	public void run() {
+		for (int i = 0; i < 5; i++)
+		{
+		System.out.println(Thread.currentThread().getName() + " " + i);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		}
+	}
+}
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Thread t1 = new Test();
+		Thread t2 = new Test();
+		
+		t1.setName("Thread 1");
+		t2.setName("Thread 2");
+		
+		t1.start();
+		t2.start();
+
+	}
+
+}

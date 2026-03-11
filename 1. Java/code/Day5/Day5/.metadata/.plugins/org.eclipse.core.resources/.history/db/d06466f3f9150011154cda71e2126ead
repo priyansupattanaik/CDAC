@@ -1,0 +1,38 @@
+package com.cdac.Mangers;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.cdac.models.Employee;
+
+public class EmployeeManager {
+	
+	ArrayList<Employee> elist=new ArrayList<Employee>();
+	
+	
+	public EmployeeManager()
+	{
+		elist.add(new Employee(101, "Sham", 4567.89f, "AI"));
+		elist.add(new Employee(102, "Ram", 4567.89f, "BDA"));
+		elist.add(new Employee(103, "Soham", 4567.89f, "DAC"));
+		elist.add(new Employee(104, "Aniket", 4567.89f, "AI"));
+	}
+	
+	
+	void AddEmployee()
+	{
+		Employee e=new Employee();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter EmpId: ");
+		e.EmpId=sc.nextInt();
+		System.out.println("Enter Name: ");
+		e.Name=sc.next();
+		System.out.println("Enter Salary: ");
+		e.Salary=sc.nextFloat();
+		System.out.println("Enter DeptName: ");
+		e.DeptName=sc.next();
+		
+		
+	}
+
+}

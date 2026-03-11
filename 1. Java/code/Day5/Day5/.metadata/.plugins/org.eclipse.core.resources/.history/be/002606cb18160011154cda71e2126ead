@@ -1,0 +1,25 @@
+package com.cdac.main;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		
+		int Num1=100;
+		int Num2=0;
+		int Res=0;
+		try
+		{
+			Res=Num1/Num2;
+		}
+		catch(ArithmeticException ex)
+		{
+			System.out.println(ex.getMessage());
+		}
+		
+		System.out.println("The Res: "+Res);
+		System.out.println("Rest of the program");
+		System.out.println("Main Ends Here");
+		
+	}
+}

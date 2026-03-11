@@ -1,0 +1,17 @@
+package com.cdac.main;
+
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Integer a1=100;
+		
+		
+		System.out.println(a1.getClass());
+
+	}
+
+}

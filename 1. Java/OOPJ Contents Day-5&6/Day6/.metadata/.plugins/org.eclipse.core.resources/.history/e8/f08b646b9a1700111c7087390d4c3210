@@ -1,0 +1,146 @@
+package com.cdac.main;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+class Student
+{
+	int RollNO;
+	String Name;
+	int Age;
+	float Fees;
+	
+	public Student() {
+		super();
+	}
+
+	public Student(int rollNO, String name, int age, float fees) {
+		super();
+		RollNO = rollNO;
+		Name = name;
+		Age = age;
+		Fees = fees;
+	}
+
+	@Override
+	public String toString() {
+		return "RollNO=" + RollNO + ", Name=" + Name + ", Age=" + Age + ", Fees=" + Fees;
+	}
+	
+	
+}
+
+class AgeComparator implements Comparator<Student>
+{
+	@Override
+	public int compare(Student o1, Student o2) {
+		
+		if(o1.Age>o2.Age)
+		{
+			return 1;
+		}
+		if(o1.Age<o2.Age)
+		{
+			return -1;
+		}
+		
+		return 0;
+	}
+	
+}
+
+public class Program {
+	//Implementation of Comparator using Lambda
+	public static void main(String[] args) {
+		ArrayList<Student> slist=new ArrayList<Student>();
+		
+		//Student s=new Student(101, "Sandeep", 34, 34567.89f);
+		
+		slist.add(new Student(101, "Sandeep", 34, 34567.89f));
+		slist.add(new Student(104, "Zeenat", 21, 134567.89f));
+		slist.add(new Student(106, "Hritik", 20, 567.89f));
+		slist.add(new Student(102, "Sohan", 78, 67.89f));
+		slist.add(new Student(107, "Aniket", 27, 1233.89f));
+		slist.add(new Student(105, "Ankur", 24, 1000.0f));
+		slist.add(new Student(103, "Payal", 26, 1117.89f));
+		System.out.println("Before Sorting");
+		slist.stream().forEach(e->System.out.println(e));
+		
+		
+		
+		Collections.sort(slist, (s1,s2)->Integer.compare(s1.RollNO, s2.RollNO));
+		
+		System.out.println("After sorting by Rolll No");
+		slist.stream().forEach(e->System.out.println(e));
+		
+		
+	}
+	//Implementation of Comparator using anon Class
+	public static void main2(String[] args) {
+		ArrayList<Student> slist=new ArrayList<Student>();
+		
+		//Student s=new Student(101, "Sandeep", 34, 34567.89f);
+		
+		slist.add(new Student(101, "Sandeep", 34, 34567.89f));
+		slist.add(new Student(104, "Zeenat", 21, 134567.89f));
+		slist.add(new Student(106, "Hritik", 20, 567.89f));
+		slist.add(new Student(102, "Sohan", 78, 67.89f));
+		slist.add(new Student(107, "Aniket", 27, 1233.89f));
+		slist.add(new Student(105, "Ankur", 24, 1000.0f));
+		slist.add(new Student(103, "Payal", 26, 1117.89f));
+		System.out.println("Before Sorting");
+		slist.stream().forEach(e->System.out.println(e));
+		
+		Comparator<Student> FeesComp=new Comparator<Student>() {
+			
+			@Override
+			public int compare(Student o1, Student o2) {
+				
+				if(o1.Fees>o2.Fees)
+				{
+					return 1;
+				}
+				if(o1.Fees<o2.Fees)
+				{
+					return -1;
+				}
+				return 0;
+			}
+		};
+		
+		Collections.sort(slist, FeesComp);
+		
+		System.out.println("After sorting by Fees");
+		slist.stream().forEach(e->System.out.println(e));
+		
+		
+	}
+	
+	//Implementation of Comparator using Class
+	public static void main1(String[] args) {
+
+		ArrayList<Student> slist=new ArrayList<Student>();
+		
+		//Student s=new Student(101, "Sandeep", 34, 34567.89f);
+		
+		slist.add(new Student(101, "Sandeep", 34, 34567.89f));
+		slist.add(new Student(104, "Zeenat", 21, 134567.89f));
+		slist.add(new Student(106, "Hritik", 20, 567.89f));
+		slist.add(new Student(102, "Sohan", 78, 67.89f));
+		slist.add(new Student(107, "Aniket", 27, 1233.89f));
+		slist.add(new Student(105, "Ankur", 24, 1000.0f));
+		slist.add(new Student(103, "Payal", 26, 1117.89f));
+		
+		slist.stream().forEach(e->System.out.println(e));
+		//Collections.sort(slist);		//NOT OK
+		
+		//AgeComparator c1=new AgeComparator();
+		//Collections.sort(slist,c1);
+		Collections.sort(slist,new AgeComparator());
+		
+		System.out.println("After sorting by Age");
+		slist.stream().forEach(e->System.out.println(e));
+		
+	}
+}

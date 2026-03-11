@@ -1,0 +1,11 @@
+package com.cdac.Mangers;
+
+import java.util.ArrayList;
+
+import com.cdac.models.*;
+
+public class EmployeeManager {
+	
+	ArrayList<Employee> elist=new ArrayList<Employee>();
+
+}

@@ -1,0 +1,187 @@
+package com.cdac.main;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+import com.cdac.Mangers.EmployeeManager;
+
+
+
+class Student
+{
+	int RollNO;
+	String Name;
+	int Age;
+	float Fees;
+	
+	public Student() {
+		super();
+	}
+
+	public Student(int rollNO, String name, int age, float fees) {
+		super();
+		RollNO = rollNO;
+		Name = name;
+		Age = age;
+		Fees = fees;
+	}
+
+	@Override
+	public String toString() {
+		return "RollNO=" + RollNO + ", Name=" + Name + ", Age=" + Age + ", Fees=" + Fees;
+	}
+	
+	
+}
+
+public class Program {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Student> slist=new ArrayList<Student>();
+		
+		//Student s=new Student(101, "Sandeep", 34, 34567.89f);
+		
+		slist.add(new Student(101, "Sandeep", 34, 34567.89f));
+		slist.add(new Student(104, "Zeenat", 21, 134567.89f));
+		slist.add(new Student(106, "Hritik", 20, 567.89f));
+		slist.add(new Student(102, "Sohan", 78, 67.89f));
+		slist.add(new Student(107, "Aniket", 27, 1233.89f));
+		slist.add(new Student(105, "Ankur", 24, 1000.0f));
+		slist.add(new Student(103, "Payal", 26, 1117.89f));
+		
+		
+		System.out.println(slist);
+		
+		
+		System.out.println("For Each Loop");
+		
+		for(Student s :slist)
+		{
+			System.out.println(s);
+		}
+		
+		
+		System.out.println("By using iterator");
+		Iterator<Student> it=slist.iterator();
+		
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
+		}
+		
+		
+		System.out.println("Traverse using list Iterator");
+		
+		ListIterator<Student> lit = slist.listIterator();
+		
+		while(lit.hasNext())
+		{
+			System.out.println(lit.next());
+		}
+	}
+	
+	public static void main3(String[] args) {
+		
+		ArrayList<Integer> nlist=new ArrayList<Integer>();
+		
+		nlist.add(1);
+		nlist.add(13);
+		nlist.add(20);
+		nlist.add(9);
+		nlist.add(67);
+		nlist.add(90);
+		nlist.add(786);
+		
+		System.out.println(nlist);
+		
+		
+		Collections.sort(nlist);
+		
+		System.out.println(nlist);
+		
+		
+		
+		nlist.stream().filter(n->n>50).forEach(e->System.out.println(e));
+		
+		nlist.stream().filter(n->n>50).filter(n->n%2==0).forEach(e->System.out.println(e));
+
+	}
+	
+	public static void main2(String[] args) {
+		
+		
+		ArrayList list=new ArrayList<>();		//Raw Collection Type
+		
+		list.add(10);
+		list.add("Malkeet");
+		list.add(10);
+		list.add("Malkeet");
+		list.add(10);
+		list.add(1233.67f);
+		
+		
+		
+		System.out.println(list);
+		
+		for(Object o:list)			//For-Each Loop
+		{
+			System.out.println(o);
+		}
+		
+		list.stream().forEach(e->System.out.println(e));
+		
+	}
+
+	public static void main1(String[] args) 
+	{
+
+		int choice;
+		Scanner sc=new Scanner(System.in);
+		EmployeeManager em=new EmployeeManager();
+		
+		
+		do
+		{
+			System.out.println("======================Employee Management System======================");
+			System.out.println("Press 1 to Add Employee");
+			System.out.println("Press 2 to View All Employee");
+			System.out.println("Press 3 to Update Employee");
+			System.out.println("Press 4 to Delete Employee");
+			System.out.println("Press 5 to Exit the Program");
+			System.out.println("=======================================================================");
+			System.out.println("Enter you choice");
+			choice=sc.nextInt();
+			
+			switch (choice) 
+			{
+			case 1:
+				em.AddEmployee();
+				break;
+			case 2:
+				em.PrintEmployees();
+				break;
+			case 3:
+				em.UpdateEmployee();
+				break;
+			case 4:
+				em.DeleteEmployee();
+				break;
+			case 5:
+				System.out.println("Exiting The Program! Bye Bye");
+				break;
+			default:
+				System.out.println("Invalid Input");
+				break;
+			}
+		}while(choice!=5);
+		
+		
+		
+	}
+	
+
+}

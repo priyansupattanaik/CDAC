@@ -1,0 +1,27 @@
+package com.movie.managers;
+
+public abstract class MovieOperation {
+
+    public abstract void addMovie() throws Exception;
+
+    public abstract void viewMovies();
+
+    public abstract void searchMovie() throws Exception;
+
+    public abstract void updateMovie() throws Exception;
+
+    public abstract void deleteMovie() throws Exception;
+
+    public abstract void sortByTitle();
+
+    public abstract void sortByDirector();
+    
+    public abstract void sortByRating();
+    
+    public abstract void sortByReleaseYear();
+
+	public void sortByreleaseYear() {
+		// TODO Auto-generated method stub
+		
+	}
+}

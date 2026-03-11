@@ -1,0 +1,19 @@
+package com.payroll.models;
+
+public class Employee {
+	
+	private int employeeID;
+	private String employeeName;
+	private String department;
+	private String designation;
+	private double basicSalary;
+	private int yearOfExperience;
+	private double performanceRating;
+	
+	public Employee() {}
+	
+	public Employee ( int employeeID, String employeeName, String department, String designation, double basicSalary, int yearOfExperience, double performanceRating) {
+		
+	}
+
+}

@@ -1,0 +1,144 @@
+package com.cdac.model;
+
+public class Product{
+	private int productId;
+	private String name;
+	private int Quantity;
+	private String ManufactureDate;
+	private float price;
+	private String Rating;
+	private String Category;
+	
+	
+	public Product() {
+		super();
+	}
+
+
+
+	public Product(int productId, String name, int quantity, String manufactureDate, float price, String Rating,
+			String category) {
+		super();
+		this.productId = productId;
+		this.name = name;
+		this.price = price;
+		this.Quantity = quantity;
+		this.ManufactureDate = manufactureDate;
+		this.Rating = Rating;
+		this.Category = category;
+	}
+
+
+
+
+	public int getProductId() {
+		return this.productId;
+	}
+
+
+
+
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+
+
+
+
+	public String getname() {
+		return this.name;
+	}
+
+
+
+
+	public void setname(String name) {
+		this.name = name;
+	}
+
+
+
+
+	public float getPrice() {
+		return price;
+	}
+
+
+
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+
+
+
+	public int getQuantity() {
+		return Quantity;
+	}
+
+
+
+
+	public void setQuantity(int quantity) {
+		this.Quantity = quantity;
+	}
+
+
+
+
+	public String getManufactureDate() {
+		return ManufactureDate;
+	}
+
+
+
+
+	public void setManufactureDate(String manufactureDate) {
+		this.ManufactureDate = manufactureDate;
+	}
+
+
+	public String getRating() {
+		return this.Rating;
+	}
+
+
+
+
+	public void setRating(String Rating) {
+		this.Rating = Rating;
+	}
+
+
+
+
+	public String getCategory() {
+		return this.Category;
+	}
+
+
+
+
+	public void setCategory(String category) {
+		this.Category = category;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + this.productId + ", name=" + this.name + ", price=" + this.price + ", Quantity=" + this.Quantity
+				+ ", ManufactureDate=" + this.ManufactureDate + ", Rating=" + this.Rating + ", Category=" + this.Category + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

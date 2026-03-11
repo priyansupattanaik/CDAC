@@ -1,0 +1,18 @@
+package com.cdac.main;
+
+
+public class Program
+{
+	
+	
+	public static void ShowNumber(int Num1)
+	{
+		System.out.println("Number is: "+Num1);
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Program.ShowNumber(100);
+	}
+}

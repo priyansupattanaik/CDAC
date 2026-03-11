@@ -1,0 +1,883 @@
+package com.university.main;
+
+import com.university.managers.*;
+import com.university.models.*;
+import com.university.exceptions.*;
+
+import java.util.List;
+import java.util.Scanner;
+import java.util.function.Predicate;
+
+public class StudentRegistrationSystem {
+    private static final StudentManager studentManager = new StudentManager();
+    private static final ProfessorManager professorManager = new ProfessorManager();
+    private static final CourseManager courseManager = new CourseManager();
+    private static final EnrollmentManager enrollmentManager = new EnrollmentManager();
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to University Student Registration System");
+        System.out.println("=" + 50);
+        
+        // Initialize with some sample data
+        initializeSampleData();
+        
+        while (true) {
+            showMainMenu();
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // consume newline
+            
+            try {
+                switch (choice) {
+                    case 1: manageStudents(); break;
+                    case 2: manageProfessors(); break;
+                    case 3: manageCourses(); break;
+                    case 4: manageEnrollments(); break;
+                    case 5: searchRecords(); break;
+                    case 6: sortRecords(); break;
+                    case 7: displayAllRecords(); break;
+                    case 0: 
+                        System.out.println("Thank you for using the system!");
+                        return;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    }
+    
+    private static void showMainMenu() {
+        System.out.println("\n=== MAIN MENU ===");
+        System.out.println("1. Manage Students");
+        System.out.println("2. Manage Professors");
+        System.out.println("3. Manage Courses");
+        System.out.println("4. Manage Enrollments");
+        System.out.println("5. Search Records");
+        System.out.println("6. Sort Records");
+        System.out.println("7. Display All Records");
+        System.out.println("0. Exit");
+        System.out.print("Enter your choice: ");
+    }
+    
+    private static void manageStudents() {
+        while (true) {
+            System.out.println("\n=== STUDENT MANAGEMENT ===");
+            System.out.println("1. Add Student");
+            System.out.println("2. View All Students");
+            System.out.println("3. Update Student");
+            System.out.println("4. Delete Student");
+            System.out.println("5. View Student by ID");
+            System.out.println("0. Back to Main Menu");
+            System.out.print("Enter your choice: ");
+            
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            
+            try {
+                switch (choice) {
+                    case 1:
+                        addStudent();
+                        break;
+                    case 2:
+                        viewAllStudents();
+                        break;
+                    case 3:
+                        updateStudent();
+                        break;
+                    case 4:
+                        deleteStudent();
+                        break;
+                    case 5:
+                        viewStudentById();
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        System.out.println("Invalid choice.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    }
+    
+    private static void addStudent() {
+        System.out.print("Enter student name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter email: ");
+        String email = scanner.nextLine();
+        System.out.print("Enter phone: ");
+        String phone = scanner.nextLine();
+        System.out.print("Enter address: ");
+        String address = scanner.nextLine();
+        System.out.print("Enter enrollment year: ");
+        int enrollmentYear = scanner.nextInt();
+        System.out.print("Enter current semester (1-8): ");
+        int semester = scanner.nextInt();
+        System.out.print("Enter CGPA: ");
+        double cgpa = scanner.nextDouble();
+        scanner.nextLine(); // consume newline
+        System.out.print("Enter major: ");
+        String major = scanner.nextLine();
+        System.out.print("Enter credits completed: ");
+        int creditsCompleted = scanner.nextInt();
+        System.out.print("Is active? (true/false): ");
+        boolean isActive = scanner.nextBoolean();
+        System.out.print("Enter scholarship amount: ");
+        double scholarshipAmount = scanner.nextDouble();
+        
+        Student student = new Student(0, 0, name, email, phone, address,
+                enrollmentYear, semester, cgpa, major, creditsCompleted,
+                isActive, scholarshipAmount);
+        
+        studentManager.add(student);
+        System.out.println("Student added successfully!");
+    }
+    
+    private static void viewAllStudents() {
+        List<Student> students = studentManager.getAll();
+        if (students.isEmpty()) {
+            System.out.println("No students found.");
+            return;
+        }
+        
+        System.out.println("\n=== ALL STUDENTS ===");
+        for (Student s : students) {
+            System.out.printf("ID: %d, Name: %s, Email: %s, CGPA: %.2f, Major: %s%n",
+                    s.getStudentId(), s.getName(), s.getEmail(), s.getCgpa(), s.getMajor());
+        }
+    }
+    
+    private static void updateStudent() {
+        System.out.print("Enter student ID to update: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        
+        Student existing = studentManager.findById(id);
+        if (existing == null) {
+            System.out.println("Student not found.");
+            return;
+        }
+        
+        System.out.println("Current details:");
+        System.out.printf("Name: %s, Email: %s, CGPA: %.2f%n", 
+                existing.getName(), existing.getEmail(), existing.getCgpa());
+        
+        System.out.print("Enter new name (or press Enter to keep current): ");
+        String newName = scanner.nextLine();
+        if (!newName.isEmpty()) {
+            existing.setName(newName);
+        }
+        
+        System.out.print("Enter new email (or press Enter to keep current): ");
+        String newEmail = scanner.nextLine();
+        if (!newEmail.isEmpty()) {
+            existing.setEmail(newEmail);
+        }
+        
+        System.out.print("Enter new CGPA (or press Enter to keep current): ");
+        String cgpaStr = scanner.nextLine();
+        if (!cgpaStr.isEmpty()) {
+            existing.setCgpa(Double.parseDouble(cgpaStr));
+        }
+        
+        studentManager.update(existing);
+        System.out.println("Student updated successfully!");
+    }
+    
+    private static void deleteStudent() {
+        System.out.print("Enter student ID to delete: ");
+        int id = scanner.nextInt();
+        studentManager.delete(id);
+        System.out.println("Student deleted successfully!");
+    }
+    
+    private static void viewStudentById() {
+        System.out.print("Enter student ID: ");
+        int id = scanner.nextInt();
+        Student student = studentManager.findById(id);
+        if (student != null) {
+            System.out.println("\n=== STUDENT DETAILS ===");
+            System.out.printf("ID: %d%nName: %s%nEmail: %s%nPhone: %s%nAddress: %s%n", 
+                    student.getStudentId(), student.getName(), student.getEmail(),
+                    student.getPhone(), student.getAddress());
+            System.out.printf("Enrollment Year: %d, Semester: %d, CGPA: %.2f%n", 
+                    student.getEnrollmentYear(), student.getSemester(), student.getCgpa());
+            System.out.printf("Major: %s, Credits Completed: %d, Active: %s%n", 
+                    student.getMajor(), student.getCreditsCompleted(), student.isActive() ? "Yes" : "No");
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
+    
+    private static void manageProfessors() {
+        while (true) {
+            System.out.println("\n=== PROFESSOR MANAGEMENT ===");
+            System.out.println("1. Add Professor");
+            System.out.println("2. View All Professors");
+            System.out.println("3. Update Professor");
+            System.out.println("4. Delete Professor");
+            System.out.println("5. View Professor by ID");
+            System.out.println("0. Back to Main Menu");
+            System.out.print("Enter your choice: ");
+            
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            
+            try {
+                switch (choice) {
+                    case 1:
+                        addProfessor();
+                        break;
+                    case 2:
+                        viewAllProfessors();
+                        break;
+                    case 3:
+                        updateProfessor();
+                        break;
+                    case 4:
+                        deleteProfessor();
+                        break;
+                    case 5:
+                        viewProfessorById();
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        System.out.println("Invalid choice.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    }
+    
+    private static void addProfessor() {
+        System.out.print("Enter professor name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter email: ");
+        String email = scanner.nextLine();
+        System.out.print("Enter phone: ");
+        String phone = scanner.nextLine();
+        System.out.print("Enter address: ");
+        String address = scanner.nextLine();
+        System.out.print("Enter department: ");
+        String department = scanner.nextLine();
+        System.out.print("Enter designation: ");
+        String designation = scanner.nextLine();
+        System.out.print("Enter qualification: ");
+        String qualification = scanner.nextLine();
+        System.out.print("Enter experience years: ");
+        int experienceYears = scanner.nextInt();
+        scanner.nextLine(); // consume newline
+        System.out.print("Enter specialization: ");
+        String specialization = scanner.nextLine();
+        System.out.print("Enter salary: ");
+        double salary = scanner.nextDouble();
+        
+        Professor professor = new Professor(0, 0, name, email, phone, address,
+                department, designation, qualification, experienceYears,
+                specialization, salary);
+        
+        professorManager.add(professor);
+        System.out.println("Professor added successfully!");
+    }
+    
+    private static void viewAllProfessors() {
+        List<Professor> professors = professorManager.getAll();
+        if (professors.isEmpty()) {
+            System.out.println("No professors found.");
+            return;
+        }
+        
+        System.out.println("\n=== ALL PROFESSORS ===");
+        for (Professor p : professors) {
+            System.out.printf("ID: %d, Name: %s, Email: %s, Department: %s%n",
+                    p.getProfessorId(), p.getName(), p.getEmail(), p.getDepartment());
+        }
+    }
+    
+    private static void updateProfessor() {
+        System.out.print("Enter professor ID to update: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        
+        Professor existing = professorManager.findById(id);
+        if (existing == null) {
+            System.out.println("Professor not found.");
+            return;
+        }
+        
+        System.out.println("Current details:");
+        System.out.printf("Name: %s, Email: %s, Department: %s%n", 
+                existing.getName(), existing.getEmail(), existing.getDepartment());
+        
+        System.out.print("Enter new name (or press Enter to keep current): ");
+        String newName = scanner.nextLine();
+        if (!newName.isEmpty()) {
+            existing.setName(newName);
+        }
+        
+        System.out.print("Enter new email (or press Enter to keep current): ");
+        String newEmail = scanner.nextLine();
+        if (!newEmail.isEmpty()) {
+            existing.setEmail(newEmail);
+        }
+        
+        System.out.print("Enter new department (or press Enter to keep current): ");
+        String newDepartment = scanner.nextLine();
+        if (!newDepartment.isEmpty()) {
+            existing.setDepartment(newDepartment);
+        }
+        
+        professorManager.update(existing);
+        System.out.println("Professor updated successfully!");
+    }
+    
+    private static void deleteProfessor() {
+        System.out.print("Enter professor ID to delete: ");
+        int id = scanner.nextInt();
+        professorManager.delete(id);
+        System.out.println("Professor deleted successfully!");
+    }
+    
+    private static void viewProfessorById() {
+        System.out.print("Enter professor ID: ");
+        int id = scanner.nextInt();
+        Professor professor = professorManager.findById(id);
+        if (professor != null) {
+            System.out.println("\n=== PROFESSOR DETAILS ===");
+            System.out.printf("ID: %d%nName: %s%nEmail: %s%nPhone: %s%nAddress: %s%n", 
+                    professor.getProfessorId(), professor.getName(), professor.getEmail(),
+                    professor.getPhone(), professor.getAddress());
+            System.out.printf("Department: %s, Designation: %s, Qualification: %s%n", 
+                    professor.getDepartment(), professor.getDesignation(), professor.getQualification());
+            System.out.printf("Experience: %d years, Specialization: %s, Salary: %.2f%n", 
+                    professor.getExperienceYears(), professor.getSpecialization(), professor.getSalary());
+        } else {
+            System.out.println("Professor not found.");
+        }
+    }
+    
+    private static void manageCourses() {
+        while (true) {
+            System.out.println("\n=== COURSE MANAGEMENT ===");
+            System.out.println("1. Add Course");
+            System.out.println("2. View All Courses");
+            System.out.println("3. Update Course");
+            System.out.println("4. Delete Course");
+            System.out.println("5. View Course by Code");
+            System.out.println("0. Back to Main Menu");
+            System.out.print("Enter your choice: ");
+            
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            
+            try {
+                switch (choice) {
+                    case 1:
+                        addCourse();
+                        break;
+                    case 2:
+                        viewAllCourses();
+                        break;
+                    case 3:
+                        updateCourse();
+                        break;
+                    case 4:
+                        deleteCourse();
+                        break;
+                    case 5:
+                        viewCourseById();
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        System.out.println("Invalid choice.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    }
+    
+    private static void addCourse() {
+        System.out.print("Enter course code: ");
+        String courseCode = scanner.nextLine();
+        System.out.print("Enter course name: ");
+        String courseName = scanner.nextLine();
+        System.out.print("Enter credits: ");
+        int credits = scanner.nextInt();
+        scanner.nextLine(); // consume newline
+        System.out.print("Enter department: ");
+        String department = scanner.nextLine();
+        System.out.print("Enter professor ID: ");
+        int professorId = scanner.nextInt();
+        System.out.print("Enter semester offered (1-8): ");
+        int semesterOffered = scanner.nextInt();
+        System.out.print("Enter max seats: ");
+        int maxSeats = scanner.nextInt();
+        scanner.nextLine(); // consume newline
+        System.out.print("Enter schedule (e.g., 'Mon/Wed 10-11:30'): ");
+        String schedule = scanner.nextLine();
+        
+        Course course = new Course(courseCode, courseName, credits, department, professorId,
+                semesterOffered, maxSeats, schedule);
+        
+        courseManager.add(course);
+        System.out.println("Course added successfully!");
+    }
+    
+    private static void viewAllCourses() {
+        List<Course> courses = courseManager.getAll();
+        if (courses.isEmpty()) {
+            System.out.println("No courses found.");
+            return;
+        }
+        
+        System.out.println("\n=== ALL COURSES ===");
+        for (Course c : courses) {
+            System.out.printf("Code: %s, Name: %s, Credits: %d, Department: %s%n",
+                    c.getCourseCode(), c.getCourseName(), c.getCredits(), c.getDepartment());
+        }
+    }
+    
+    private static void updateCourse() {
+        System.out.print("Enter course code to update: ");
+        String code = scanner.nextLine();
+        
+        Course existing = courseManager.findById(code);
+        if (existing == null) {
+            System.out.println("Course not found.");
+            return;
+        }
+        
+        System.out.println("Current details:");
+        System.out.printf("Name: %s, Credits: %d, Department: %s%n", 
+                existing.getCourseName(), existing.getCredits(), existing.getDepartment());
+        
+        System.out.print("Enter new name (or press Enter to keep current): ");
+        String newName = scanner.nextLine();
+        if (!newName.isEmpty()) {
+            existing.setCourseName(newName);
+        }
+        
+        System.out.print("Enter new credits (or press Enter to keep current): ");
+        String creditsStr = scanner.nextLine();
+        if (!creditsStr.isEmpty()) {
+            existing.setCredits(Integer.parseInt(creditsStr));
+        }
+        
+        courseManager.update(existing);
+        System.out.println("Course updated successfully!");
+    }
+    
+    private static void deleteCourse() {
+        System.out.print("Enter course code to delete: ");
+        String code = scanner.nextLine();
+        courseManager.delete(code.hashCode());
+        System.out.println("Course deleted successfully!");
+    }
+    
+    private static void viewCourseById() {
+        System.out.print("Enter course code: ");
+        String code = scanner.nextLine();
+        Course course = courseManager.findById(code);
+        if (course != null) {
+            System.out.println("\n=== COURSE DETAILS ===");
+            System.out.printf("Code: %s, Name: %s%nCredits: %d, Department: %s%n", 
+                    course.getCourseCode(), course.getCourseName(), course.getCredits(), course.getDepartment());
+            System.out.printf("Professor ID: %d, Semester Offered: %d, Max Seats: %d%n", 
+                    course.getProfessorId(), course.getSemesterOffered(), course.getMaxSeats());
+            System.out.printf("Schedule: %s, Available: %s%n", 
+                    course.getSchedule(), course.isAvailable() ? "Yes" : "No");
+        } else {
+            System.out.println("Course not found.");
+        }
+    }
+    
+    private static void manageEnrollments() {
+        while (true) {
+            System.out.println("\n=== ENROLLMENT MANAGEMENT ===");
+            System.out.println("1. Enroll Student in Course");
+            System.out.println("2. View All Enrollments");
+            System.out.println("3. Update Enrollment");
+            System.out.println("4. Delete Enrollment");
+            System.out.println("5. View Enrollment by ID");
+            System.out.println("0. Back to Main Menu");
+            System.out.print("Enter your choice: ");
+            
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            
+            try {
+                switch (choice) {
+                    case 1:
+                        enrollStudent();
+                        break;
+                    case 2:
+                        viewAllEnrollments();
+                        break;
+                    case 3:
+                        updateEnrollment();
+                        break;
+                    case 4:
+                        deleteEnrollment();
+                        break;
+                    case 5:
+                        viewEnrollmentById();
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        System.out.println("Invalid choice.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    }
+    
+    private static void enrollStudent() {
+        System.out.print("Enter student ID: ");
+        int studentId = scanner.nextInt();
+        System.out.print("Enter course code: ");
+        String courseCode = scanner.next();
+        scanner.nextLine(); // consume newline
+        
+        // Check if student exists
+        Student student = studentManager.findById(studentId);
+        if (student == null) {
+            throw new StudentNotFoundException("Student with ID " + studentId + " not found");
+        }
+        
+        // Check if course exists
+        Course course = courseManager.findById(courseCode);
+        if (course == null) {
+            throw new CourseNotFoundException("Course with code " + courseCode + " not found");
+        }
+        
+        // Check if course is full
+        if (!course.enrollStudent()) {
+            throw new CourseFullException("Course " + courseCode + " is already full");
+        }
+        
+        // Create enrollment
+        Enrollment enrollment = new Enrollment(0, studentId, courseCode, 
+                com.university.utils.DateUtils.getCurrentDate(), 
+                student.getSemester(), "Enrolled", 0.0);
+        
+        enrollmentManager.add(enrollment);
+        System.out.println("Student enrolled successfully!");
+    }
+    
+    private static void viewAllEnrollments() {
+        List<Enrollment> enrollments = enrollmentManager.getAll();
+        if (enrollments.isEmpty()) {
+            System.out.println("No enrollments found.");
+            return;
+        }
+        
+        System.out.println("\n=== ALL ENROLLMENTS ===");
+        for (Enrollment e : enrollments) {
+            System.out.printf("ID: %d, Student ID: %d, Course Code: %s, Status: %s%n",
+                    e.getEnrollmentId(), e.getStudentId(), e.getCourseCode(), e.getStatus());
+        }
+    }
+    
+    private static void updateEnrollment() {
+        System.out.print("Enter enrollment ID to update: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        
+        Enrollment existing = enrollmentManager.findById(id);
+        if (existing == null) {
+            System.out.println("Enrollment not found.");
+            return;
+        }
+        
+        System.out.println("Current details:");
+        System.out.printf("Student ID: %d, Course Code: %s, Status: %s%n", 
+                existing.getStudentId(), existing.getCourseCode(), existing.getStatus());
+        
+        System.out.print("Enter new status (Enrolled/Completed/Dropped/Withdrawn): ");
+        String newStatus = scanner.nextLine();
+        if (!newStatus.isEmpty()) {
+            existing.setStatus(newStatus);
+        }
+        
+        enrollmentManager.update(existing);
+        System.out.println("Enrollment updated successfully!");
+    }
+    
+    private static void deleteEnrollment() {
+        System.out.print("Enter enrollment ID to delete: ");
+        int id = scanner.nextInt();
+        enrollmentManager.delete(id);
+        System.out.println("Enrollment deleted successfully!");
+    }
+    
+    private static void viewEnrollmentById() {
+        System.out.print("Enter enrollment ID: ");
+        int id = scanner.nextInt();
+        Enrollment enrollment = enrollmentManager.findById(id);
+        if (enrollment != null) {
+            System.out.println("\n=== ENROLLMENT DETAILS ===");
+            System.out.printf("ID: %d, Student ID: %d, Course Code: %s%n", 
+                    enrollment.getEnrollmentId(), enrollment.getStudentId(), enrollment.getCourseCode());
+            System.out.printf("Enrollment Date: %s, Semester: %d, Status: %s%n", 
+                    enrollment.getEnrollmentDate(), enrollment.getSemester(), enrollment.getStatus());
+            if (!enrollment.getGrade().isEmpty()) {
+                System.out.printf("Grade: %s, Attendance: %.2f%%%n", 
+                        enrollment.getGrade(), enrollment.getAttendancePercentage());
+            }
+        } else {
+            System.out.println("Enrollment not found.");
+        }
+    }
+    
+    private static void searchRecords() {
+        System.out.println("\n=== SEARCH RECORDS ===");
+        System.out.println("1. Search Students by Name");
+        System.out.println("2. Search Professors by Name");
+        System.out.println("3. Search Courses by Name");
+        System.out.println("4. Search Students by Major");
+        System.out.println("5. Search Courses by Department");
+        System.out.print("Enter your choice: ");
+        
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        
+        try {
+            switch (choice) {
+                case 1:
+                    searchStudentsByName();
+                    break;
+                case 2:
+                    searchProfessorsByName();
+                    break;
+                case 3:
+                    searchCoursesByName();
+                    break;
+                case 4:
+                    searchStudentsByMajor();
+                    break;
+                case 5:
+                    searchCoursesByDepartment();
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+    
+    private static void searchStudentsByName() {
+        System.out.print("Enter student name to search: ");
+        String name = scanner.nextLine();
+        List<Student> students = studentManager.searchStudentsByName(name);
+        if (students.isEmpty()) {
+            System.out.println("No students found with that name.");
+        } else {
+            System.out.println("\n=== SEARCH RESULTS ===");
+            for (Student s : students) {
+                System.out.printf("ID: %d, Name: %s, Email: %s, CGPA: %.2f%n",
+                        s.getStudentId(), s.getName(), s.getEmail(), s.getCgpa());
+            }
+        }
+    }
+    
+    private static void searchProfessorsByName() {
+        System.out.print("Enter professor name to search: ");
+        String name = scanner.nextLine();
+        List<Professor> professors = professorManager.searchProfessorsByName(name);
+        if (professors.isEmpty()) {
+            System.out.println("No professors found with that name.");
+        } else {
+            System.out.println("\n=== SEARCH RESULTS ===");
+            for (Professor p : professors) {
+                System.out.printf("ID: %d, Name: %s, Email: %s, Department: %s%n",
+                        p.getProfessorId(), p.getName(), p.getEmail(), p.getDepartment());
+            }
+        }
+    }
+    
+    private static void searchCoursesByName() {
+        System.out.print("Enter course name to search: ");
+        String name = scanner.nextLine();
+        List<Course> courses = courseManager.searchCoursesByName(name);
+        if (courses.isEmpty()) {
+            System.out.println("No courses found with that name.");
+        } else {
+            System.out.println("\n=== SEARCH RESULTS ===");
+            for (Course c : courses) {
+                System.out.printf("Code: %s, Name: %s, Credits: %d, Department: %s%n",
+                        c.getCourseCode(), c.getCourseName(), c.getCredits(), c.getDepartment());
+            }
+        }
+    }
+    
+    private static void searchStudentsByMajor() {
+        System.out.print("Enter major to search: ");
+        String major = scanner.nextLine();
+        List<Student> students = studentManager.getStudentsByMajor(major);
+        if (students.isEmpty()) {
+            System.out.println("No students found in that major.");
+        } else {
+            System.out.println("\n=== SEARCH RESULTS ===");
+            for (Student s : students) {
+                System.out.printf("ID: %d, Name: %s, CGPA: %.2f%n",
+                        s.getStudentId(), s.getName(), s.getCgpa());
+            }
+        }
+    }
+    
+    private static void searchCoursesByDepartment() {
+        System.out.print("Enter department to search: ");
+        String department = scanner.nextLine();
+        List<Course> courses = courseManager.getCoursesByDepartment(department);
+        if (courses.isEmpty()) {
+            System.out.println("No courses found in that department.");
+        } else {
+            System.out.println("\n=== SEARCH RESULTS ===");
+            for (Course c : courses) {
+                System.out.printf("Code: %s, Name: %s, Credits: %d%n",
+                        c.getCourseCode(), c.getCourseName(), c.getCredits());
+            }
+        }
+    }
+    
+    private static void sortRecords() {
+        System.out.println("\n=== SORT RECORDS ===");
+        System.out.println("1. Sort Students by CGPA");
+        System.out.println("2. Sort Professors by Experience");
+        System.out.println("3. Sort Courses by Credits");
+        System.out.print("Enter your choice: ");
+        
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        
+        try {
+            switch (choice) {
+                case 1:
+                    sortStudentsByCGPA();
+                    break;
+                case 2:
+                    sortProfessorsByExperience();
+                    break;
+                case 3:
+                    sortCoursesByCredits();
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+    
+    private static void sortStudentsByCGPA() {
+        List<Student> students = studentManager.getStudentsSortedByCGPA();
+        if (students.isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            System.out.println("\n=== STUDENTS SORTED BY CGPA ===");
+            for (Student s : students) {
+                System.out.printf("ID: %d, Name: %s, CGPA: %.2f%n",
+                        s.getStudentId(), s.getName(), s.getCgpa());
+            }
+        }
+    }
+    
+    private static void sortProfessorsByExperience() {
+        List<Professor> professors = professorManager.getProfessorsSortedByExperience();
+        if (professors.isEmpty()) {
+            System.out.println("No professors found.");
+        } else {
+            System.out.println("\n=== PROFESSORS SORTED BY EXPERIENCE ===");
+            for (Professor p : professors) {
+                System.out.printf("ID: %d, Name: %s, Experience: %d years%n",
+                        p.getProfessorId(), p.getName(), p.getExperienceYears());
+            }
+        }
+    }
+    
+    private static void sortCoursesByCredits() {
+        List<Course> courses = courseManager.getCoursesSortedByCredits();
+        if (courses.isEmpty()) {
+            System.out.println("No courses found.");
+        } else {
+            System.out.println("\n=== COURSES SORTED BY CREDITS ===");
+            for (Course c : courses) {
+                System.out.printf("Code: %s, Name: %s, Credits: %d%n",
+                        c.getCourseCode(), c.getCourseName(), c.getCredits());
+            }
+        }
+    }
+    
+    private static void displayAllRecords() {
+        System.out.println("\n=== ALL RECORDS ===");
+        System.out.println("1. All Students");
+        System.out.println("2. All Professors");
+        System.out.println("3. All Courses");
+        System.out.println("4. All Enrollments");
+        System.out.print("Enter your choice: ");
+        
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        
+        try {
+            switch (choice) {
+                case 1:
+                    viewAllStudents();
+                    break;
+                case 2:
+                    viewAllProfessors();
+                    break;
+                case 3:
+                    viewAllCourses();
+                    break;
+                case 4:
+                    viewAllEnrollments();
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+    
+    private static void initializeSampleData() {
+        // Add sample students
+        Student student1 = new Student(0, 1001, "John Smith", "john@example.com", 
+                "1234567890", "123 Main St", 2021, 2, 3.75, "Computer Science", 30, true, 5000.0);
+        Student student2 = new Student(0, 1002, "Emily Johnson", "emily@example.com", 
+                "0987654321", "456 Oak Ave", 2021, 2, 3.90, "Mathematics", 32, true, 7000.0);
+        studentManager.add(student1);
+        studentManager.add(student2);
+        
+        // Add sample professors
+        Professor prof1 = new Professor(0, 2001, "Dr. Robert Brown", "robert@example.com",
+                "5551234567", "789 Pine Rd", "Computer Science", "Professor", "PhD", 15, 
+                "Software Engineering", 80000.0);
+        Professor prof2 = new Professor(0, 2002, "Dr. Sarah Davis", "sarah@example.com",
+                "5559876543", "321 Elm St", "Mathematics", "Associate Professor", "PhD", 10, 
+                "Calculus", 70000.0);
+        professorManager.add(prof1);
+        professorManager.add(prof2);
+        
+        // Add sample courses
+        Course course1 = new Course("CS101", "Introduction to Programming", 3, 
+                "Computer Science", 2001, 1, 30, "Mon/Wed 10-11:30");
+        Course course2 = new Course("MATH201", "Calculus II", 4, 
+                "Mathematics", 2002, 2, 25, "Tue/Thu 2-3:30");
+        courseManager.add(course1);
+        courseManager.add(course2);
+        
+        System.out.println("Sample data initialized successfully!");
+    }
+}
