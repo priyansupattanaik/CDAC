@@ -154,3 +154,144 @@ s1.display() #calling the method using the object
 #- instance variables : speed, fuel
 #- instance method : accelerate(), brake(), speed()
 
+#Note : Object created --> Instance Method is called --> Access instance variables
+
+#2. Class method:
+# - class method operates on class variables.
+# - They are defined using @classmethod decorator.
+
+#Keypoints:
+#1. `cls` is the first parameter.
+#2. Used to modify class variables.
+#3. Called using class name
+
+#Ex:
+# @classmethod
+# def m1(cls):
+#     print("Hello")
+
+#Ex: Udemy online platform application:
+# - class variable
+# - constructors
+# - 1 static method
+# - multiple objects
+
+# @classmethod
+# def users(cls):
+#     print(count)
+
+#3. Static method:
+# - static method do not use instance variables or class variables.
+#- they behave like normal function placed inside the class.
+
+#Keypoints:
+#1. @staticmethod decorator is used.
+#2. no 'self' or 'cls' parameter.
+#3. Used for utility functions
+
+# Ex:
+
+#class Test:
+
+# @staticmethod
+# def cal(a,b):
+#     return a+b
+#
+#Test.cal(5,10) #15
+
+#Ex:
+#Calculate area of cone using static method:
+# class Cone:
+#     @staticmethod
+#     def area(r,h):
+#         return 3.14*r*r*h/3
+
+#ex: 
+#library management system:
+#static method : calculate total price of books
+#class method : update book count, add new book
+
+#HW: Create a application for library management system using instance, static/class and local variables.
+#Also use instance method, class method, static method.
+
+#Q) Instance Variable:
+#- Object Specific
+
+#Q) Static Variable:
+#- Class Specific
+
+#Q) Local Variable:
+#- Method Specific
+
+#OOPs Pillars:
+#--------------
+#1. Abrstraction:
+#2. Encapsulation:
+#3. Inheritance:
+#4. Polymorphism:
+
+#- modular programming
+#- flexibility
+#- code reusability
+#- data protection / data hiding
+
+#1. Abstraction:
+#----------------
+# - Hiding the implementation details and showing only the functionality to the user.
+# - It helps to reduce complexity and increase efficiency.
+
+#Abstract Class:
+# - An abstract class is a class that cannot be instantiated (cannot create objects) and is used as a blueprint for other classes.
+# - Abstract class contains abstract methods:
+#       -abstract methods
+#       -normal methods
+#       -variables
+# - Abstract classes ensures that child classes implement certain required methods.
+
+#KeyPointers:
+#1. defined using ABC(Abstract Base Class) module.
+#2. Must inherit from ABC(Abstract Base Class).
+#3. May contain abstract methods
+#4. cannot create objects of abstract class.
+#5. Child classes must implement all abstract methods.
+
+#Syntax:
+from abc import ABC, abstractmethod
+class AbstractClass(ABC):
+    pass
+
+#Abstract Method:
+# - An abstract method is a method that is declared but does not have an implementation in the abstract class.
+# - Child classes must override and implement this method.
+
+#Syntax:
+# @abstractmethod
+# def abstractmethod_name(self):
+#     pass
+
+#2. Encapsulation:
+# - Binding data(variables) and methods (functions) together in a single unit (class).
+
+#Keypoints:
+#1. protecting sensetive data
+#2. preventing accidental function
+#3. controlling access of the variables using methods
+#4. improve the maintainability of the code
+
+#Access Specifier:
+#1. Private Variable:(__var) : within the class only
+
+#Ex: __accno, __bal
+
+#2. Protected Variable: (_var) : use in child classes
+
+#Ex: _balance, _speed
+
+#3. Public Variable: (no underscore) : (var) : use anywhere
+#Ex: bal, speed, pi
+
+#Rules to implement Encapsulation:
+#---------------------------------
+#1. Sensitive Data should be private
+#2. Access should be given through setter/getter methods
+#3. Avoid Direct modification of important variables.
