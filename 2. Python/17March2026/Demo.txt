@@ -1,0 +1,2 @@
+This is a demo file for file handling in Python
+This is a demo file for file handling in Python 90
