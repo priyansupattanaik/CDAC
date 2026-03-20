@@ -1,27 +1,30 @@
 class BankAccount:
-    def __init__(self, accountNumber, balance=0):
-        self.__accountNumber = accountNumber
-        self.__balance = balance
-
+    def __init__(self, account_number, balance=0):
+        self.__accountNumber = account_number
+        self.__balance = balance 
+    
     def deposit(self, amount):
         if amount > 0:
             self.__balance += amount
-            print(f"Deposited Rs.{amount}. New balance: Rs.{self.__balance}")
+            print(f"Deposited: {amount}. New balance: {self.__balance}")
         else:
-            print("Deposit amount must be positive.")
-
-    def withdraw(self, amount):
-        if amount > 0 and amount <= self.__balance:
-            self.__balance -= amount
-            print(f"Withdrew Rs.{amount}. New balance: Rs.{self.__balance}")
-        else:
-            print("Invalid withdrawal amount or insufficient funds.")
-
-    def geBalance(self):
-        return self.__balance
+            print("Error: Deposit amount must be positive")
     
-account = BankAccount("12345", 1000)
+    def withdraw(self, amount):
+        if amount > 0:
+            if self.__balance >= amount:
+                self.__balance -= amount
+                print(f"Withdrawn: {amount}. New balance: {self.__balance}")
+            else:
+                print("Error: Insufficient balance")
+        else:
+            print("Error: Withdrawal amount must be positive")
+    
+    def getBalance(self):
+        return self.__balance
+
+account = BankAccount("ACC12345", 1000)
 account.deposit(500)
 account.withdraw(200)
-account.withdraw(1500)
-print(f"Final balance: Rs.{account.geBalance()}")
+account.withdraw(2000) 
+print(f"Final balance: {account.getBalance()}")
