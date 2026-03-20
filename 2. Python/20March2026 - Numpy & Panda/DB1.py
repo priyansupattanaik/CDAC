@@ -20,10 +20,20 @@ cursor = conn.cursor()
 # """)
 
 # Insert data
-query = "INSERT INTO students (NAME, AGE, COURSE) VALUES (%s, %s, %s)"
-values = ("Amit", 24, "Python")
+# query = "INSERT INTO students (NAME, AGE, COURSE) VALUES (%s, %s, %s)"
+# values = ("Amit", 24, "Python")
 
-cursor.execute(query, values)
+query = "SELECT * FROM students"
+
+cursor.execute(query)
+rows = cursor.fetchall()
+
+print("Student record for display")
+for row in rows:
+    print(row)
+
+print("Displayed Successfully")
+
 conn.commit()
 
 print("Data Inserted Successfully")
