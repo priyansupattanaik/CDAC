@@ -1,0 +1,1489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Quiz — Pandas, Matplotlib, Seaborn & MySQL</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg: #f5f7fa;
+        --surface: #ffffff;
+        --surface2: #f0f4f8;
+        --border: #e2e8f0;
+        --border2: #cbd5e0;
+        --text: #1a202c;
+        --muted: #64748b;
+        --hint: #94a3b8;
+        --blue: #2563eb;
+        --blue-lt: #eff6ff;
+        --blue-dk: #1e40af;
+        --green: #16a34a;
+        --green-lt: #f0fdf4;
+        --green-dk: #14532d;
+        --red: #dc2626;
+        --red-lt: #fef2f2;
+        --red-dk: #7f1d1d;
+        --radius: 10px;
+        --radius-sm: 6px;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      /* TOP BAR */
+      .topbar {
+        background: #1e293b;
+        padding: 0 2rem;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .topbar-title {
+        color: #f8fafc;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+      .topbar-score {
+        background: #334155;
+        color: #94a3b8;
+        font-size: 13px;
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-weight: 500;
+      }
+      .topbar-score span {
+        color: #f8fafc;
+        font-weight: 700;
+      }
+
+      /* LAYOUT */
+      .layout {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 0;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+        align-items: start;
+      }
+      @media (max-width: 768px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          display: none;
+        }
+      }
+
+      /* SIDEBAR */
+      .sidebar {
+        position: sticky;
+        top: 72px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1rem;
+      }
+      .sidebar h3 {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--hint);
+        margin-bottom: 0.75rem;
+      }
+      .topic-legend {
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.65rem;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .tl-row {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .tl-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .q-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4px;
+      }
+      .q-dot {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 600;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        color: var(--muted);
+        transition: all 0.15s;
+      }
+      .q-dot:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+      }
+      .q-dot.current {
+        border-color: var(--blue);
+        background: var(--blue-lt);
+        color: var(--blue-dk);
+      }
+      .q-dot.ok {
+        background: var(--green-lt);
+        border-color: var(--green);
+        color: var(--green-dk);
+      }
+      .q-dot.wrong {
+        background: var(--red-lt);
+        border-color: var(--red);
+        color: var(--red-dk);
+      }
+      .sidebar-stats {
+        margin-top: 1rem;
+        border-top: 1px solid var(--border);
+        padding-top: 0.75rem;
+      }
+      .stat-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        padding: 3px 0;
+      }
+      .stat-row .lbl {
+        color: var(--muted);
+      }
+      .stat-row .val {
+        font-weight: 600;
+        color: var(--text);
+      }
+      .c-ok {
+        color: var(--green);
+      }
+      .c-wr {
+        color: var(--red);
+      }
+
+      /* MAIN */
+      .main {
+        padding-left: 1.5rem;
+      }
+      @media (max-width: 768px) {
+        .main {
+          padding-left: 0;
+        }
+      }
+
+      /* PROGRESS */
+      .progress-wrap {
+        margin-bottom: 1.5rem;
+      }
+      .progress-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .progress-bar-bg {
+        height: 6px;
+        background: var(--border);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      .progress-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #2563eb, #7c3aed);
+        border-radius: 3px;
+        transition: width 0.4s ease;
+      }
+
+      /* CARD */
+      .qcard {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.75rem 2rem;
+        margin-bottom: 1.25rem;
+      }
+      .qcard-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1rem;
+      }
+      .topic-badge {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .qnum-badge {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--muted);
+        margin-left: auto;
+      }
+      .shuffle-tag {
+        font-size: 10px;
+        color: var(--hint);
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        padding: 2px 8px;
+        border-radius: 10px;
+      }
+      .qtext {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.65;
+        margin-bottom: 1rem;
+      }
+      .qtext code {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+        font-size: 13.5px;
+        color: #1d4ed8;
+      }
+      .code-block {
+        background: #0f172a;
+        color: #e2e8f0;
+        font-family: "Courier New", Consolas, monospace;
+        font-size: 13px;
+        line-height: 1.7;
+        padding: 1rem 1.25rem;
+        border-radius: var(--radius-sm);
+        margin: 0.75rem 0 1rem;
+        overflow-x: auto;
+        white-space: pre;
+        border-left: 3px solid #2563eb;
+      }
+
+      /* OPTIONS */
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+      .opt {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 16px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        transition: all 0.15s;
+        background: var(--surface);
+        user-select: none;
+      }
+      .opt:hover:not(.locked) {
+        border-color: #93c5fd;
+        background: var(--blue-lt);
+      }
+      .opt.correct {
+        border-color: var(--green);
+        background: var(--green-lt);
+      }
+      .opt.wrong {
+        border-color: var(--red);
+        background: var(--red-lt);
+      }
+      .opt-letter {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1.5px solid var(--border2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        color: var(--muted);
+        transition: all 0.15s;
+      }
+      .opt.correct .opt-letter {
+        background: var(--green);
+        border-color: var(--green);
+        color: #fff;
+      }
+      .opt.wrong .opt-letter {
+        background: var(--red);
+        border-color: var(--red);
+        color: #fff;
+      }
+      .opt-text {
+        font-size: 14px;
+        color: var(--text);
+        line-height: 1.55;
+        padding-top: 3px;
+      }
+      .opt-text code {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 1px 4px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+      }
+
+      /* EXPLANATION */
+      .explanation {
+        margin-top: 1rem;
+        padding: 0.9rem 1.1rem;
+        background: var(--green-lt);
+        border-left: 4px solid var(--green);
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        font-size: 13.5px;
+        color: #166534;
+        line-height: 1.6;
+      }
+      .explanation.wrong-exp {
+        background: var(--red-lt);
+        border-left-color: var(--red);
+        color: #991b1b;
+      }
+      .explanation strong {
+        font-weight: 700;
+      }
+
+      /* NAV */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      .btn {
+        padding: 10px 22px;
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1.5px solid var(--border2);
+        background: var(--surface);
+        color: var(--text);
+        transition: all 0.15s;
+      }
+      .btn:hover {
+        background: var(--surface2);
+        border-color: #94a3b8;
+      }
+      .btn:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
+      .btn.primary {
+        background: var(--blue);
+        border-color: var(--blue);
+        color: #fff;
+      }
+      .btn.primary:hover {
+        background: var(--blue-dk);
+      }
+      .btn.success {
+        background: var(--green);
+        border-color: var(--green);
+        color: #fff;
+      }
+      .btn.success:hover {
+        background: #15803d;
+      }
+
+      /* RESULTS */
+      .results {
+        max-width: 680px;
+      }
+      .score-banner {
+        background: linear-gradient(135deg, #1e293b 0%, #1e3a5f 100%);
+        border-radius: var(--radius);
+        padding: 2.5rem 2rem;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 1.5rem;
+      }
+      .score-circle {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 3px solid rgba(255, 255, 255, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+      .score-num {
+        font-size: 38px;
+        font-weight: 800;
+        color: #60a5fa;
+        line-height: 1;
+      }
+      .score-total {
+        font-size: 14px;
+        color: #94a3b8;
+        margin-top: 2px;
+      }
+      .score-pct {
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+      .score-grade {
+        font-size: 15px;
+        color: #94a3b8;
+      }
+      .topic-breakdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 1.5rem;
+      }
+      @media (max-width: 500px) {
+        .topic-breakdown {
+          grid-template-columns: 1fr;
+        }
+      }
+      .tb-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .tb-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+      .tb-info .tb-topic {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 2px;
+      }
+      .tb-info .tb-score {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .tb-info .tb-bar-bg {
+        height: 4px;
+        background: var(--border);
+        border-radius: 2px;
+        margin-top: 4px;
+        width: 100%;
+      }
+      .tb-info .tb-bar-fill {
+        height: 4px;
+        border-radius: 2px;
+      }
+      .review-section h3 {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.75rem;
+      }
+      .review-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 5px;
+        margin-bottom: 1.5rem;
+      }
+      @media (max-width: 500px) {
+        .review-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+      .rv-dot {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 700;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        color: var(--muted);
+        transition: all 0.15s;
+      }
+      .rv-dot.ok {
+        background: var(--green-lt);
+        border-color: var(--green);
+        color: var(--green-dk);
+      }
+      .rv-dot.wrong {
+        background: var(--red-lt);
+        border-color: var(--red);
+        color: var(--red-dk);
+      }
+      .rv-dot:hover {
+        transform: scale(1.08);
+      }
+      .results-nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-title">🐍 Python Quiz</div>
+      <div class="topbar-score" id="topbar-score">
+        Score: <span id="tb-num">0</span> / 40
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="sidebar" id="sidebar">
+        <h3>Questions</h3>
+        <!-- <div class="topic-legend">
+          <div class="tl-row">
+            <div class="tl-dot" style="background: #16a34a"></div>
+            Pandas (Q1–13)
+          </div>
+          <div class="tl-row">
+            <div class="tl-dot" style="background: #d97706"></div>
+            Matplotlib (Q14–23)
+          </div>
+          <div class="tl-row">
+            <div class="tl-dot" style="background: #7c3aed"></div>
+            Seaborn (Q24–31)
+          </div>
+          <div class="tl-row">
+            <div class="tl-dot" style="background: #2563eb"></div>
+            MySQL (Q32–40)
+          </div>
+        </div> -->
+        <div class="q-grid" id="qgrid"></div>
+        <div class="sidebar-stats">
+          <div class="stat-row">
+            <span class="lbl">Answered</span
+            ><span class="val" id="s-ans">0 / 40</span>
+          </div>
+          <div class="stat-row">
+            <span class="lbl c-ok">✔ Correct</span
+            ><span class="val c-ok" id="s-ok">0</span>
+          </div>
+          <div class="stat-row">
+            <span class="lbl c-wr">✘ Wrong</span
+            ><span class="val c-wr" id="s-wr">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="main" id="main"></div>
+    </div>
+
+    <script>
+      /* ─── RAW QUESTION BANK (Pandas → Matplotlib → Seaborn → MySQL) ─── */
+      const RAW = [
+        /* ── PANDAS ── */
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What is a Pandas Series?",
+          opts: [
+            "A 2D labeled data table",
+            "A 1D labeled array that holds data of any type",
+            "A Python list with no index",
+            "A type of dictionary",
+          ],
+          ans: 1,
+          exp: "A <strong>Series</strong> is a one-dimensional labeled array. It has an index on the left and values on the right — like a single column of a spreadsheet. Example: <code>pd.Series([10, 20, 30])</code>",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does <code>pd.DataFrame(data)</code> produce when <code>data</code> is a dictionary?",
+          code: 'data = {"Name": ["Amit", "Neha"], "Marks": [85, 92]}\ndf = pd.DataFrame(data)',
+          opts: [
+            "A Python list",
+            "A 2D table — dict keys become column names, values become rows",
+            "A Series",
+            "A NumPy array",
+          ],
+          ans: 1,
+          exp: "DataFrame from a dict uses <strong>keys as column names</strong> and values as column data. Rows are numbered 0, 1, 2 ... automatically unless you specify an index.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does <code>df.shape</code> return for a DataFrame with 5 rows and 4 columns?",
+          opts: [
+            "A list of column names",
+            "The number of rows only",
+            "The tuple (5, 4)",
+            "The data types of each column",
+          ],
+          ans: 2,
+          exp: "<strong>df.shape</strong> returns a tuple <code>(rows, columns)</code>. So (5, 4) means 5 rows and 4 columns. A quick way to check dataset dimensions without printing the whole DataFrame.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What statistical information does <code>df.describe()</code> show?",
+          opts: [
+            "The first 5 rows",
+            "Data types and null counts",
+            "Count, mean, std, min, 25%, 50%, 75%, max for numeric columns",
+            "Column names only",
+          ],
+          ans: 2,
+          exp: "<strong>df.describe()</strong> gives a full statistical summary for all numeric columns: count, mean, std, min, max, and three quartile values (25%, 50%, 75%).",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What is the key difference between <code>df.loc[]</code> and <code>df.iloc[]</code>?",
+          opts: [
+            "They are identical",
+            "loc uses index label; iloc uses integer position",
+            "iloc uses index label; loc uses integer position",
+            "loc is for columns, iloc is for rows",
+          ],
+          ans: 1,
+          exp: "<strong>loc</strong> is label-based — <code>df.loc[2]</code> gets the row whose index label equals 2. <strong>iloc</strong> is position-based — <code>df.iloc[0]</code> always gets the very first row regardless of index labels.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What rows does this boolean filter return?",
+          code: 'df[df["Salary"] > 60000]',
+          opts: [
+            "Rows where Salary equals 60000",
+            "Rows where Salary is less than 60000",
+            "Only rows where Salary is greater than 60000",
+            "Drops rows where Salary > 60000",
+          ],
+          ans: 2,
+          exp: "Boolean filtering evaluates the condition row by row (True/False) and returns only the <strong>True rows</strong>. The original DataFrame is not modified.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does <code>df.isnull().sum()</code> return?",
+          opts: [
+            "Total number of rows in the DataFrame",
+            "Count of missing NaN values per column",
+            "A True/False for the whole DataFrame",
+            "Rows where all values are null",
+          ],
+          ans: 1,
+          exp: "<strong>isnull()</strong> creates a boolean mask (True where NaN). Calling <strong>.sum()</strong> on it adds up the True values per column, showing exactly how many values are missing in each column.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does <code>df['Sales'].fillna(df['Sales'].mean())</code> do?",
+          opts: [
+            "Drops all NaN rows",
+            "Replaces NaN values in Sales with the column mean",
+            "Returns True where NaN exists",
+            "Fills all columns with zero",
+          ],
+          ans: 1,
+          exp: "<strong>fillna()</strong> replaces NaN values with a specified value. Using <code>.mean()</code> fills gaps with the average, minimising distortion of the column statistics.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does this lambda code create?",
+          code: 'df["Grade"] = df["Marks"].apply(\n    lambda x: "A" if x > 75 else ("B" if x > 40 else "C"))',
+          opts: [
+            "Filters rows with Marks > 75",
+            "A new Grade column assigned by Marks value",
+            "Sorts the DataFrame by Grade",
+            "Drops rows where Marks < 40",
+          ],
+          ans: 1,
+          exp: "<strong>apply()</strong> runs the lambda on every value in Marks. The nested if-else assigns 'A', 'B', or 'C'. The result is stored as a new column 'Grade' in the DataFrame.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does <code>df.groupby('Department')['Salary'].mean()</code> return?",
+          opts: [
+            "Total salary for all departments",
+            "Mean salary per department group",
+            "All rows sorted by Department",
+            "A filtered DataFrame",
+          ],
+          ans: 1,
+          exp: "<strong>groupby()</strong> splits the DataFrame into groups by 'Department'. Chaining <strong>.mean()</strong> computes the average Salary for each group. Result is a Series indexed by department name.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What join type does <code>pd.merge(df_left, df_right, on='ID')</code> perform by default?",
+          opts: [
+            "Left join — all rows from df_left",
+            "Right join — all rows from df_right",
+            "Inner join — only rows with matching ID in both",
+            "Outer join — all rows from both",
+          ],
+          ans: 2,
+          exp: "<strong>pd.merge()</strong> defaults to <code>how='inner'</code>, keeping only rows where the key column (ID) exists in <strong>both</strong> DataFrames. Use <code>how='left'/'right'/'outer'</code> for other join types.",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does <code>df.sort_values('Salary', ascending=False)</code> do?",
+          opts: [
+            "Sorts alphabetically A to Z",
+            "Sorts rows by Salary from highest to lowest",
+            "Removes duplicate salary values",
+            "Filters to show only the highest salary",
+          ],
+          ans: 1,
+          exp: "<strong>sort_values()</strong> reorders rows by the specified column. <code>ascending=False</code> sorts descending (high → low). <code>ascending=True</code> (the default) sorts ascending (low → high).",
+        },
+
+        {
+          topic: "Pandas",
+          tc: "#14532D",
+          bg: "#DCFCE7",
+          q: "What does <code>axis=1</code> specify in <code>df.drop('Dept', axis=1, inplace=True)</code>?",
+          opts: [
+            "Drop a row named Dept",
+            "Drop the column named Dept",
+            "Rename the column",
+            "Create a copy without Dept",
+          ],
+          ans: 1,
+          exp: "<strong>axis=1</strong> = columns, <strong>axis=0</strong> = rows. <code>inplace=True</code> modifies the original DataFrame directly. Without inplace you must reassign: <code>df = df.drop('Dept', axis=1)</code>",
+        },
+
+        /* ── MATPLOTLIB ── */
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What is the correct standard import statement for Matplotlib's pyplot?",
+          opts: [
+            "import matplotlib as mpl",
+            "import pyplot as py",
+            "import matplotlib.pyplot as plt",
+            "from matplotlib import plot",
+          ],
+          ans: 2,
+          exp: "<strong>import matplotlib.pyplot as plt</strong> is the universal convention. Every plot function is then called as <code>plt.plot()</code>, <code>plt.bar()</code>, <code>plt.show()</code> etc.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What type of chart does <code>plt.plot(x, y)</code> produce by default?",
+          opts: [
+            "Bar chart",
+            "Pie chart",
+            "Scatter plot",
+            "Line chart connecting data points",
+          ],
+          ans: 3,
+          exp: "<strong>plt.plot()</strong> draws a line chart — it connects data points with a continuous line. To make a scatter plot instead, use <code>marker='o'</code> and <code>linestyle=''</code>.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What does <code>linestyle='--'</code> produce in <code>plt.plot()</code>?",
+          opts: [
+            "A bold thick line",
+            "A dashed line",
+            "A dotted line",
+            "A solid line",
+          ],
+          ans: 1,
+          exp: "<strong>linestyle</strong> controls line appearance. Options: <code>'-'</code> solid (default), <code>'--'</code> dashed, <code>'-.'</code> dash-dot, <code>':'</code> dotted.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What does the <code>bins=5</code> parameter control in <code>plt.hist()</code>?",
+          code: "plt.hist(data, bins=5, color='orange', edgecolor='black')",
+          opts: [
+            "The number of bars (value ranges)",
+            "The colour of the bars",
+            "The maximum x-axis value",
+            "The figure size",
+          ],
+          ans: 0,
+          exp: "<strong>bins=</strong> divides the data range into equal intervals. <code>bins=5</code> creates 5 bars. More bins = more granular view. Fewer bins = broader, smoother view.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "In <code>plt.scatter()</code>, what does the <code>s=</code> parameter control?",
+          code: "plt.scatter(x, y, color='purple', s=100)",
+          opts: [
+            "The scatter colour scheme",
+            "The connecting line style",
+            "The size (area) of each marker dot",
+            "The number of data points plotted",
+          ],
+          ans: 2,
+          exp: "<strong>s=</strong> sets the marker size in points squared. <code>s=100</code> gives medium dots. You can pass a list to <code>s=</code> to make each dot a different size proportional to a data value.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What does <code>autopct='%1.1f%%'</code> do in <code>plt.pie()</code>?",
+          code: "plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)",
+          opts: [
+            "Sets the starting rotation angle",
+            "Makes the chart a perfect circle",
+            "Displays formatted percentage labels on each slice",
+            "Changes slice colours",
+          ],
+          ans: 2,
+          exp: "<strong>autopct</strong> formats the percentage shown on each pie slice. <code>'%1.1f%%'</code> = 1 digit, 1 decimal, then %. So a slice worth 27.5% shows '27.5%' directly on the chart.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What does <code>plt.subplot(1, 2, 1)</code> mean?",
+          opts: [
+            "1 row, 2 columns — activate the 1st subplot",
+            "2 rows, 1 column — activate the 1st subplot",
+            "1 subplot split in 2 halves",
+            "Row 1, Column 2, first element",
+          ],
+          ans: 0,
+          exp: "<strong>plt.subplot(rows, cols, index)</strong>. So <code>(1, 2, 1)</code> = 1 row, 2 columns total, make the <strong>1st</strong> subplot active. Call <code>plt.subplot(1, 2, 2)</code> next to activate the 2nd.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What is the purpose of <code>plt.tight_layout()</code>?",
+          opts: [
+            "Makes the plot window smaller",
+            "Prevents overlapping by auto-adjusting subplot spacing",
+            "Saves the figure to disk",
+            "Increases the default font size",
+          ],
+          ans: 1,
+          exp: "<strong>plt.tight_layout()</strong> automatically adjusts padding between subplots so titles, labels, and tick marks do not overlap each other. Always call it before <code>plt.show()</code>.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What does <code>plt.axis('equal')</code> do when used after <code>plt.pie()</code>?",
+          opts: [
+            "Makes all slices equal size",
+            "Ensures the chart renders as a perfect circle",
+            "Removes axis tick labels",
+            "Displays a grid overlay",
+          ],
+          ans: 1,
+          exp: "<strong>axis('equal')</strong> forces equal scaling on both x and y axes. Without it, the pie may appear as an oval/ellipse. Always recommended after every <code>plt.pie()</code> call.",
+        },
+
+        {
+          topic: "Matplotlib",
+          tc: "#92400E",
+          bg: "#FEF3C7",
+          q: "What does <code>plt.barh(categories, values, color='lightgreen')</code> produce?",
+          opts: [
+            "A vertical bar chart",
+            "A horizontal bar chart",
+            "A green histogram",
+            "A pie chart",
+          ],
+          ans: 1,
+          exp: "<strong>plt.barh()</strong> draws a <strong>horizontal</strong> bar chart — categories on the y-axis, values on the x-axis. Use <code>plt.bar()</code> for vertical bars.",
+        },
+
+        /* ── SEABORN ── */
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What Python library is Seaborn primarily built on top of?",
+          opts: ["NumPy", "Pandas", "Matplotlib", "Plotly"],
+          ans: 2,
+          exp: "<strong>Seaborn</strong> is a high-level statistical visualisation library built on top of <strong>Matplotlib</strong>. It provides nicer default styles and simpler syntax for complex statistical charts.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What is the correct and universal import alias for Seaborn?",
+          opts: [
+            "import seaborn",
+            "import seaborn as sb",
+            "import seaborn as sns",
+            "from seaborn import *",
+          ],
+          ans: 2,
+          exp: "<strong>import seaborn as sns</strong> is the universal convention. All seaborn functions are then called as <code>sns.barplot()</code>, <code>sns.heatmap()</code>, <code>sns.set_style()</code> etc.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What does <code>sns.heatmap(corr, annot=True)</code> visualise?",
+          code: "corr = df.corr()\nsns.heatmap(corr, annot=True)",
+          opts: [
+            "Temperature on a geographic map",
+            "A matrix as coloured cells — great for correlation matrices",
+            "Distribution of a single variable",
+            "Category-wise bar comparisons",
+          ],
+          ans: 1,
+          exp: "<strong>heatmap()</strong> visualises a 2D matrix using colour intensity. Most used for correlation matrices. <code>annot=True</code> prints the actual numeric values inside each cell.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What does <code>sns.pairplot(df)</code> create?",
+          opts: [
+            "A single scatter plot",
+            "Pairwise scatter plots for all numeric column combinations",
+            "Pie charts for every column",
+            "Bar charts for each column pair",
+          ],
+          ans: 1,
+          exp: "<strong>pairplot()</strong> creates a grid of scatter plots for every pair of numeric columns, with a histogram on the diagonal. It is the fastest way to visually explore all variable relationships at once.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What does the <code>hue=</code> parameter do in Seaborn plots?",
+          code: 'sns.scatterplot(x="Age", y="Salary", hue="Department", data=df)',
+          opts: [
+            "Changes background colour",
+            "Sets a uniform colour for all points",
+            "Colours data points based on a categorical column value",
+            "Sets the axis label colour",
+          ],
+          ans: 2,
+          exp: "<strong>hue=</strong> maps a categorical column to point/bar colour. Each unique value in 'Department' gets its own colour automatically, effectively adding a third dimension to a 2D plot.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What information does <code>sns.boxplot()</code> display?",
+          code: 'sns.boxplot(x="Category", y="Value", data=df)',
+          opts: [
+            "Only the mean value",
+            "Distribution, median, quartiles (Q1, Q3), and outliers",
+            "A standard line chart",
+            "A bar chart with exact values",
+          ],
+          ans: 1,
+          exp: "<strong>boxplot()</strong> shows: box = 25th–75th percentile (IQR), line inside = median, whiskers = min/max within 1.5×IQR, dots = outliers. Essential for spotting data spread and skewness.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What does <code>sns.histplot(data=df, x='Age')</code> show?",
+          opts: [
+            "A 2D heatmap matrix",
+            "Frequency distribution of the Age column",
+            "A box and whisker chart",
+            "A scatter plot of Age values",
+          ],
+          ans: 1,
+          exp: "<strong>histplot()</strong> draws a histogram showing how Age values are distributed across ranges. It is the Seaborn equivalent of <code>plt.hist()</code> with better default styling and optional KDE overlay (<code>kde=True</code>).",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What is the key difference between <code>sns.barplot()</code> and <code>plt.bar()</code>?",
+          opts: [
+            "They are completely identical",
+            "sns.barplot() shows mean + 95% confidence interval automatically; plt.bar() shows exact values",
+            "plt.bar() shows confidence intervals by default",
+            "sns.barplot() only works with string data",
+          ],
+          ans: 1,
+          exp: "<strong>sns.barplot()</strong> computes the <em>mean</em> of the y variable per category and automatically adds a 95% confidence interval error bar. <strong>plt.bar()</strong> draws the exact values you provide — no statistics.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What does <code>sns.set_style('whitegrid')</code> do?",
+          opts: [
+            "Changes all bar colours to white",
+            "Sets the background style/theme for all subsequent Seaborn plots",
+            "Removes the legend from plots",
+            "Changes the default font family",
+          ],
+          ans: 1,
+          exp: "<strong>set_style()</strong> controls the background appearance. Choices: <code>'whitegrid'</code>, <code>'darkgrid'</code>, <code>'white'</code>, <code>'dark'</code>, <code>'ticks'</code>. Must be called before creating plots to take effect.",
+        },
+
+        {
+          topic: "Seaborn",
+          tc: "#4C1D95",
+          bg: "#EDE9FE",
+          q: "What does <code>sns.countplot(x='Course', data=df)</code> display?",
+          code: 'sns.countplot(x="Course", data=df)',
+          opts: [
+            "The mean value per course",
+            "The sum of numeric values per course",
+            "The count (frequency) of each category in Course",
+            "A scatter plot of course values",
+          ],
+          ans: 2,
+          exp: "<strong>countplot()</strong> automatically counts how many times each category appears in a column and draws a bar for each. No <code>y=</code> argument needed — Seaborn counts the occurrences internally.",
+        },
+
+        /* ── MYSQL ── */
+        {
+          topic: "MySQL",
+          tc: "#1E3A5F",
+          bg: "#DBEAFE",
+          q: "What Python module is used to connect to a MySQL database?",
+          opts: ["pymysql", "mysql.connector", "sqlalchemy", "database"],
+          ans: 1,
+          exp: "<strong>mysql.connector</strong> is the official MySQL Connector/Python driver provided by Oracle. Install with: <code>pip install mysql-connector-python</code>",
+        },
+
+        {
+          topic: "MySQL",
+          tc: "#1E3A5F",
+          bg: "#DBEAFE",
+          q: "What does <code>cursor.fetchall()</code> return after executing a SELECT query?",
+          code: "cursor.execute('SELECT * FROM students')\nrows = cursor.fetchall()\nprint(rows)",
+          opts: [
+            "The first row only",
+            "The total row count",
+            "All rows as a list of tuples",
+            "A dictionary of rows",
+          ],
+          ans: 2,
+          exp: "<strong>fetchall()</strong> returns every matching row as a Python list of tuples. Example: <code>[('Amit', 24, 'Python'), ('Neha', 22, 'Java')]</code>",
+        },
+
+        {
+          topic: "MySQL",
+          tc: "#1E3A5F",
+          bg: "#DBEAFE",
+          q: "What is the purpose of <code>conn.commit()</code> in MySQL Connector?",
+          opts: [
+            "Closes the database connection",
+            "Saves/confirms pending changes permanently",
+            "Executes the last query again",
+            "Opens a new transaction",
+          ],
+          ans: 1,
+          exp: "<strong>conn.commit()</strong> permanently writes INSERT / UPDATE / DELETE operations to the database. Without it, changes are rolled back when the connection closes.",
+        },
+
+        {
+          topic: "MySQL",
+          tc: "#1E3A5F",
+          bg: "#DBEAFE",
+          q: "What does <code>%s</code> represent in this parameterized query?",
+          code: 'query = "INSERT INTO students (NAME, AGE) VALUES (%s, %s)"\nvalues = ("Amit", 24)\ncursor.execute(query, values)',
+          opts: [
+            "A string-only placeholder",
+            "A safe placeholder preventing SQL injection",
+            "A Python format string",
+            "A comment marker",
+          ],
+          ans: 1,
+          exp: "<strong>%s</strong> is a parameterized placeholder. Passing values separately from the SQL string prevents SQL injection — a critical security practice in production code.",
+        },
+
+        {
+          topic: "MySQL",
+          tc: "#1E3A5F",
+          bg: "#DBEAFE",
+          q: "What does this code block establish?",
+          code: 'conn = mysql.connector.connect(\n    host="localhost",\n    user="root",\n    password="brucewayne",\n    database="test_db"\n)',
+          opts: [
+            "Creates a new database named test_db",
+            "Deletes test_db from MySQL",
+            "A live connection to the MySQL server",
+            "Executes a SQL SELECT query",
+          ],
+          ans: 2,
+          exp: "<strong>mysql.connector.connect()</strong> opens a live connection to the MySQL server using the given credentials. The returned <code>conn</code> object is used for all subsequent operations.",
+        },
+
+        {
+          topic: "MySQL",
+          tc: "#1E3A5F",
+          bg: "#DBEAFE",
+          q: "Which cursor method retrieves only ONE row at a time after <code>execute()</code>?",
+          opts: [
+            "cursor.fetchall()",
+            "cursor.fetchone()",
+            "cursor.fetchmany()",
+            "cursor.getrow()",
+          ],
+          ans: 1,
+          exp: "<strong>fetchone()</strong> returns the next single row as a tuple, or None if no rows remain. Use <code>fetchall()</code> for all rows, <code>fetchmany(n)</code> for n rows at a time.",
+        },
+
+        {
+          topic: "MySQL",
+          tc: "#1E3A5F",
+          bg: "#DBEAFE",
+          q: "What is the correct order to close database resources cleanly?",
+          opts: [
+            "conn.close() then cursor.close()",
+            "cursor.close() then conn.close()",
+            "conn.commit() then cursor.close()",
+            "cursor.close() then conn.commit()",
+          ],
+          ans: 1,
+          exp: "Always close the <strong>cursor first</strong>, then the <strong>connection</strong>. Closing the connection before the cursor can cause errors and resource leaks.",
+        },
+      ];
+
+      /* ─── FISHER-YATES SHUFFLE ─── */
+      function shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      /* ─── BUILD RANDOMIZED QUESTIONS ─── */
+      /* For each question we create a shuffled version:
+   - opts: shuffled option texts
+   - ans:  new index pointing to the correct option after shuffle
+   - shuffleMap: maps new index → original index (for reference)
+*/
+      function buildQuestions() {
+        return RAW.map((q) => {
+          // Create indexed options: [{text, origIdx}, ...]
+          const indexed = q.opts.map((text, i) => ({ text, origIdx: i }));
+          const shuffled = shuffle(indexed);
+          const newAns = shuffled.findIndex((o) => o.origIdx === q.ans);
+          return {
+            topic: q.topic,
+            tc: q.tc,
+            bg: q.bg,
+            q: q.q,
+            code: q.code || null,
+            opts: shuffled.map((o) => o.text),
+            ans: newAns,
+            exp: q.exp,
+          };
+        });
+      }
+
+      /* ─── STATE ─── */
+      let Q = buildQuestions();
+      let cur = 0,
+        ans = new Array(40).fill(null),
+        score = 0,
+        showRes = false;
+
+      const TOPIC_ORDER = ["Pandas", "Matplotlib", "Seaborn", "MySQL"];
+      const TOPIC_ICONS = {
+        Pandas: "🐼",
+        Matplotlib: "📈",
+        Seaborn: "🎨",
+        MySQL: "🗄️",
+      };
+
+      /* ─── HELPERS ─── */
+      const esc = (s) => s.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const pct = (n, d) => Math.round((n / d) * 100);
+      const grade = (p) =>
+        p >= 90
+          ? "Excellent — Outstanding!"
+          : p >= 75
+            ? "Good — Well done!"
+            : p >= 60
+              ? "Average — Keep revising!"
+              : p >= 40
+                ? "Below average — More practice needed"
+                : "Needs significant revision";
+
+      function updateTopbar() {
+        document.getElementById("tb-num").textContent = score;
+      }
+
+      function renderSidebar() {
+        const g = document.getElementById("qgrid");
+        if (!g) return;
+        g.innerHTML = Q.map((_, i) => {
+          let c = "q-dot";
+          if (!showRes && i === cur) c += " current";
+          if (ans[i] !== null) c += ans[i] === Q[i].ans ? " ok" : " wrong";
+          return `<div class="${c}" onclick="goto(${i})">${i + 1}</div>`;
+        }).join("");
+        const done = ans.filter((a) => a !== null).length;
+        const ok = ans.filter((a, i) => a === Q[i].ans).length;
+        document.getElementById("s-ans").textContent = done + " / 40";
+        document.getElementById("s-ok").textContent = ok;
+        document.getElementById("s-wr").textContent = done - ok;
+      }
+
+      function renderMain() {
+        const m = document.getElementById("main");
+        if (showRes) {
+          renderResults(m);
+          return;
+        }
+        const q = Q[cur];
+        const ua = ans[cur];
+        const done = ua !== null;
+        const ok = done && ua === q.ans;
+        const prog = ((cur + 1) / 40) * 100;
+
+        m.innerHTML = `
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span>Question ${cur + 1} of 40</span>
+        <span>${ans.filter((a) => a !== null).length} answered</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" style="width:${prog}%"></div>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="qcard-header">
+        <span class="topic-badge" style="background:${q.bg};color:${q.tc}">${q.topic}</span>
+        <span class="qnum-badge">Q${cur + 1} / 40</span>
+      </div>
+      <div class="qtext">${q.q}</div>
+      ${q.code ? `<div class="code-block">${esc(q.code)}</div>` : ""}
+      <div class="options">
+        ${q.opts
+          .map((o, i) => {
+            let c = "opt" + (done ? " locked" : "");
+            if (done) {
+              if (i === q.ans) c += " correct";
+              else if (i === ua) c += " wrong";
+            }
+            const cl = done ? "" : `onclick="choose(${i})"`;
+            return `<div class="${c}" ${cl}>
+            <div class="opt-letter">${["A", "B", "C", "D"][i]}</div>
+            <div class="opt-text">${o}</div>
+          </div>`;
+          })
+          .join("")}
+      </div>
+      ${
+        done
+          ? `<div class="explanation ${ok ? "" : "wrong-exp"}">
+        <strong>${ok ? "Correct!" : "Incorrect."}</strong> ${q.exp}
+      </div>`
+          : ""
+      }
+    </div>
+    <div class="nav">
+      <button class="btn" onclick="prev()" ${cur === 0 ? "disabled" : ""}>← Back</button>
+      ${
+        cur < 39
+          ? `<button class="btn primary" onclick="next()" ${!done ? "disabled" : ""}>Next →</button>`
+          : `<button class="btn success" onclick="finish()" ${!done ? "disabled" : ""}>See Results</button>`
+      }
+    </div>`;
+      }
+
+      function renderResults(m) {
+        const p = pct(score, 40);
+        const tMap = {};
+        Q.forEach((q, i) => {
+          if (!tMap[q.topic])
+            tMap[q.topic] = { ok: 0, tot: 0, bg: q.bg, tc: q.tc };
+          tMap[q.topic].tot++;
+          if (ans[i] === q.ans) tMap[q.topic].ok++;
+        });
+        m.innerHTML = `
+    <div class="results">
+      <div class="score-banner">
+        <div class="score-circle">
+          <div class="score-num">${score}</div>
+          <div class="score-total">out of 40</div>
+        </div>
+        <div class="score-pct">${p}% correct</div>
+        <div class="score-grade">${grade(p)}</div>
+      </div>
+      <div class="topic-breakdown">
+        ${TOPIC_ORDER.filter((t) => tMap[t])
+          .map((t) => {
+            const v = tMap[t];
+            const b = pct(v.ok, v.tot);
+            return `<div class="tb-card">
+            <div class="tb-icon" style="background:${v.bg}">${TOPIC_ICONS[t] || "📌"}</div>
+            <div class="tb-info" style="flex:1">
+              <div class="tb-topic">${t}</div>
+              <div class="tb-score">${v.ok} / ${v.tot}</div>
+              <div class="tb-bar-bg">
+                <div class="tb-bar-fill" style="width:${b}%;background:${v.tc}"></div>
+              </div>
+            </div>
+          </div>`;
+          })
+          .join("")}
+      </div>
+      <div class="review-section">
+        <h3>Question review — click to revisit</h3>
+        <div class="review-grid">
+          ${ans
+            .map(
+              (a, i) =>
+                `<div class="rv-dot ${a === null ? "" : a === Q[i].ans ? "ok" : "wrong"}" onclick="goto(${i})">${i + 1}</div>`,
+            )
+            .join("")}
+        </div>
+      </div>
+      <div class="results-nav">
+        <button class="btn" onclick="goto(0)">Review from Q1</button>
+        <button class="btn primary" onclick="restart()">Restart & Reshuffle</button>
+      </div>
+    </div>`;
+      }
+
+      /* ─── CONTROLS ─── */
+      function choose(i) {
+        if (ans[cur] !== null) return;
+        ans[cur] = i;
+        if (i === Q[cur].ans) score++;
+        updateTopbar();
+        renderSidebar();
+        renderMain();
+      }
+      function next() {
+        if (cur < 39) {
+          cur++;
+          renderSidebar();
+          renderMain();
+        }
+      }
+      function prev() {
+        if (cur > 0) {
+          cur--;
+          renderSidebar();
+          renderMain();
+        }
+      }
+      function finish() {
+        showRes = true;
+        document.getElementById("sidebar").style.display = "none";
+        renderMain();
+      }
+      function goto(i) {
+        showRes = false;
+        document.getElementById("sidebar").style.display = "";
+        cur = i;
+        renderSidebar();
+        renderMain();
+      }
+      function restart() {
+        Q = buildQuestions(); // fresh shuffle of all options
+        cur = 0;
+        ans = new Array(40).fill(null);
+        score = 0;
+        showRes = false;
+        document.getElementById("sidebar").style.display = "";
+        updateTopbar();
+        renderSidebar();
+        renderMain();
+      }
+
+      /* ─── INIT ─── */
+      updateTopbar();
+      renderSidebar();
+      renderMain();
+    </script>
+  </body>
+</html>
