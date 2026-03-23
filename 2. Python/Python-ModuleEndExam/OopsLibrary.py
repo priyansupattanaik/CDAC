@@ -1,65 +1,45 @@
+#OOPS Library
+
 import re
 from abc import ABC, abstractmethod
 
 
-# custom exceptions
-class InvalidISBNError(Exception):
-    pass
-
-class BookAlreadyIssuedError(Exception):
-    pass
-
-class BookNotAvailableError(Exception):
-    pass
-
-class InvalidEmailError(Exception):
-    pass
+class InvalidISBNError(Exception): pass
+class BookAlreadyIssuedError(Exception): pass
+class InvalidEmailError(Exception): pass
 
 
-# abstract base class
 class LibraryItem(ABC):
-
     def __init__(self, title, author, year):
-        if not title.strip():
-            raise ValueError("Title cannot be empty")
-        if not str(year).isdigit() or int(year) < 1800 or int(year) > 2025:
-            raise ValueError("Year must be between 1800 and 2025")
-        self.__title  = title.strip()
-        self.__author = author.strip()
-        self.__year   = int(year)
+        self.__title  = title
+        self.__author = author
+        self.__year   = year
 
     def get_title(self):  return self.__title
     def get_author(self): return self.__author
     def get_year(self):   return self.__year
 
-    def set_title(self, t):
-        if not t.strip():
-            raise ValueError("Title cannot be empty")
-        self.__title = t.strip()
+    @abstractmethod
+    def display_info(self): pass
 
     @abstractmethod
-    def display_info(self):
-        pass
-
-    @abstractmethod
-    def get_fine(self, days):
-        pass
+    def get_fine(self, days): pass
 
 
-# Book class
 class Book(LibraryItem):
-
     def __init__(self, title, author, year, isbn, genre):
         super().__init__(title, author, year)
         if not re.fullmatch(r'\d{3}-\d{10}', isbn):
-            raise InvalidISBNError("ISBN format must be like 978-0061965012")
+            raise InvalidISBNError("ISBN must be like 978-0061965012")
         self.__isbn      = isbn
         self.__genre     = genre
         self.__is_issued = False
 
     def get_isbn(self):  return self.__isbn
-    def get_genre(self): return self.__genre
+    def get_genre(self):  return self.__genre
     def is_issued(self): return self.__is_issued
+
+    def set_genre(self, g): self.__genre = g
 
     def issue_book(self):
         if self.__is_issued:
@@ -67,65 +47,47 @@ class Book(LibraryItem):
         self.__is_issued = True
 
     def return_book(self):
-        if not self.__is_issued:
-            raise BookNotAvailableError(f"'{self.get_title()}' was not issued")
         self.__is_issued = False
 
     def display_info(self):
         status = "Issued" if self.__is_issued else "Available"
-        print(f"  ISBN: {self.__isbn}  Title: {self.get_title()}  Author: {self.get_author()}")
-        print(f"  Year: {self.get_year()}  Genre: {self.__genre}  Status: {status}")
+        print(f"  {self.__isbn} | {self.get_title()} | {self.get_author()} | {self.__genre} | {status}")
 
     def get_fine(self, days):
         return days * 2
 
 
-# Magazine class
 class Magazine(LibraryItem):
-
     def __init__(self, title, publisher, year, issue_no):
         super().__init__(title, publisher, year)
-        if not str(issue_no).isdigit() or int(issue_no) <= 0:
-            raise ValueError("Issue number must be positive")
-        self.__issue_no = int(issue_no)
-
-    def get_issue_no(self): return self.__issue_no
+        self.__issue_no = issue_no
 
     def display_info(self):
-        print(f"  Title: {self.get_title()}  Publisher: {self.get_author()}")
-        print(f"  Year: {self.get_year()}  Issue No: {self.__issue_no}")
+        print(f"  {self.get_title()} | {self.get_author()} | Issue: {self.__issue_no} | {self.get_year()}")
 
     def get_fine(self, days):
         return days * 1
 
 
-# Member class
 class Member:
-
     def __init__(self, name, email, member_id):
         if not re.fullmatch(r'[^@]+@[^@]+\.[^@]+', email):
-            raise InvalidEmailError("Invalid email format")
-        if not re.fullmatch(r'M\d{3}', member_id):
-            raise ValueError("Member ID must be like M001")
+            raise InvalidEmailError("Invalid email")
         self.__name      = name
         self.__email     = email
         self.__member_id = member_id
 
-    def get_name(self):      return self.__name
-    def get_email(self):     return self.__email
     def get_member_id(self): return self.__member_id
 
     def display_info(self):
-        print(f"  {self.__member_id}  {self.__name}  {self.__email}")
+        print(f"  {self.__member_id} | {self.__name} | {self.__email}")
 
 
-# dictionaries to store data
 books     = {}
 magazines = {}
 members   = {}
 
 
-# book functions
 def add_book():
     try:
         title  = input("Enter title: ")
@@ -134,10 +96,10 @@ def add_book():
         isbn   = input("Enter ISBN (978-0061965012): ")
         genre  = input("Enter genre: ")
         if isbn in books:
-            print("Book with this ISBN already exists")
+            print("Book already exists")
             return
         b = Book(title, author, year, isbn, genre)
-        books[b.get_isbn()] = b
+        books[isbn] = b
         print("Book added successfully")
     except (InvalidISBNError, ValueError) as e:
         print("Error:", e)
@@ -149,10 +111,8 @@ def display_all_books():
     if not books:
         print("No books found")
         return
-    print("\n--- All Books ---")
     for b in books.values():
         b.display_info()
-        print()
 
 
 def search_book():
@@ -165,110 +125,40 @@ def search_book():
 
 def issue_book():
     try:
-        isbn = input("Enter ISBN to issue: ")
+        isbn = input("Enter ISBN: ")
         if isbn not in books:
             print("Book not found")
             return
         books[isbn].issue_book()
-        print("Book issued successfully")
+        print("Issued successfully")
     except BookAlreadyIssuedError as e:
         print("Error:", e)
 
 
 def return_book():
-    try:
-        isbn = input("Enter ISBN to return: ")
-        if isbn not in books:
-            print("Book not found")
-            return
-        days = int(input("Enter overdue days (0 if on time): "))
-        books[isbn].return_book()
-        fine = books[isbn].get_fine(days)
-        print(f"Book returned. Fine: Rs.{fine}")
-    except (BookNotAvailableError, ValueError) as e:
-        print("Error:", e)
-
-
-def calculate_fine():
     isbn = input("Enter ISBN: ")
     if isbn not in books:
         print("Book not found")
         return
-    try:
-        days = int(input("Enter overdue days: "))
-        print(f"Fine: Rs.{books[isbn].get_fine(days)}")
-    except ValueError:
-        print("Enter a valid number")
-
-
-def sort_books_by_title():
-    if not books:
-        print("No books found")
-        return
-    sorted_list = sorted(books.values(), key=lambda b: b.get_title())
-    print("\nBooks sorted by title:")
-    for b in sorted_list:
-        b.display_info()
-        print()
-
-
-def available_books():
-    result = {isbn: b for isbn, b in books.items() if not b.is_issued()}
-    if not result:
-        print("No books available right now")
-        return
-    print("\nAvailable Books:")
-    for b in result.values():
-        b.display_info()
-        print()
+    days = int(input("Overdue days (0 if on time): "))
+    books[isbn].return_book()
+    print(f"Returned. Fine: Rs.{books[isbn].get_fine(days)}")
 
 
 def count_books():
-    total  = len(books)
     issued = sum(1 for b in books.values() if b.is_issued())
-    print(f"Total: {total}  Issued: {issued}  Available: {total - issued}")
+    print(f"Total: {len(books)}  Issued: {issued}  Available: {len(books) - issued}")
 
 
 def delete_book():
-    isbn = input("Enter ISBN to delete: ")
+    isbn = input("Enter ISBN: ")
     if isbn in books:
         books.pop(isbn)
-        print("Book deleted successfully")
+        print("Deleted")
     else:
         print("Book not found")
 
 
-# magazine functions
-def add_magazine():
-    try:
-        title  = input("Enter magazine title: ")
-        pub    = input("Enter publisher: ")
-        year   = input("Enter year: ")
-        issue  = input("Enter issue number: ")
-        key    = f"{title}-{issue}"
-        if key in magazines:
-            print("Magazine already exists")
-            return
-        m = Magazine(title, pub, year, issue)
-        magazines[key] = m
-        print("Magazine added successfully")
-    except ValueError as e:
-        print("Error:", e)
-    finally:
-        print("--- done ---")
-
-
-def display_all_magazines():
-    if not magazines:
-        print("No magazines found")
-        return
-    print("\n--- All Magazines ---")
-    for m in magazines.values():
-        m.display_info()
-        print()
-
-
-# member functions
 def add_member():
     try:
         name  = input("Enter name: ")
@@ -278,7 +168,7 @@ def add_member():
             print("Member ID already exists")
             return
         m = Member(name, email, mid)
-        members[m.get_member_id()] = m
+        members[mid] = m
         print("Member added successfully")
     except (InvalidEmailError, ValueError) as e:
         print("Error:", e)
@@ -290,8 +180,26 @@ def display_all_members():
     if not members:
         print("No members found")
         return
-    print("\n--- All Members ---")
     for m in members.values():
+        m.display_info()
+
+
+def add_magazine():
+    title = input("Enter title: ")
+    pub   = input("Enter publisher: ")
+    year  = input("Enter year: ")
+    issue = input("Enter issue number: ")
+    key   = f"{title}-{issue}"
+    m = Magazine(title, pub, year, issue)
+    magazines[key] = m
+    print("Magazine added successfully")
+
+
+def display_all_magazines():
+    if not magazines:
+        print("No magazines found")
+        return
+    for m in magazines.values():
         m.display_info()
 
 
@@ -304,33 +212,26 @@ members['M001'] = Member("Ravi Sharma",  "ravi@gmail.com",  "M001")
 members['M002'] = Member("Anita Mehta",  "anita@yahoo.com", "M002")
 
 
-# main menu
 while True:
-    print("\n===== Library Management System =====")
-    print("--- Books ---")
-    print("1.  Add Book")
-    print("2.  Display All Books")
-    print("3.  Search Book")
-    print("4.  Issue Book")
-    print("5.  Return Book")
-    print("6.  Calculate Fine")
-    print("7.  Sort Books by Title")
-    print("8.  Show Available Books")
-    print("9.  Count Books")
-    print("10. Delete Book")
-    print("--- Magazines ---")
-    print("11. Add Magazine")
-    print("12. Display All Magazines")
-    print("--- Members ---")
-    print("13. Add Member")
-    print("14. Display All Members")
-    print("15. Exit")
-    print("=====================================")
+    print("\n===== Library System =====")
+    print("1. Add Book")
+    print("2. Display Books")
+    print("3. Search Book")
+    print("4. Issue Book")
+    print("5. Return Book")
+    print("6. Count Books")
+    print("7. Delete Book")
+    print("8. Add Magazine")
+    print("9. Display Magazines")
+    print("10. Add Member")
+    print("11. Display Members")
+    print("12. Exit")
+    print("==========================")
 
     try:
-        choice = int(input("Enter your choice: "))
+        choice = int(input("Enter choice: "))
     except ValueError:
-        print("Please enter a valid number")
+        print("Enter a number")
         continue
 
     if   choice == 1:  add_book()
@@ -338,17 +239,14 @@ while True:
     elif choice == 3:  search_book()
     elif choice == 4:  issue_book()
     elif choice == 5:  return_book()
-    elif choice == 6:  calculate_fine()
-    elif choice == 7:  sort_books_by_title()
-    elif choice == 8:  available_books()
-    elif choice == 9:  count_books()
-    elif choice == 10: delete_book()
-    elif choice == 11: add_magazine()
-    elif choice == 12: display_all_magazines()
-    elif choice == 13: add_member()
-    elif choice == 14: display_all_members()
-    elif choice == 15:
-        print("Exiting. Goodbye!")
+    elif choice == 6:  count_books()
+    elif choice == 7:  delete_book()
+    elif choice == 8:  add_magazine()
+    elif choice == 9:  display_all_magazines()
+    elif choice == 10: add_member()
+    elif choice == 11: display_all_members()
+    elif choice == 12:
+        print("Goodbye!")
         break
     else:
-        print("Invalid choice. Try again.")
+        print("Invalid choice")

@@ -1,6 +1,11 @@
+#DBLibrary
+
 import mysql.connector
 
-conn   = mysql.connector.connect(host="localhost", user="root", password="brucewayne")
+conn   = mysql.connector.connect(
+    host="localhost", 
+    user="root", 
+    password="brucewayne")
 cursor = conn.cursor()
 
 cursor.execute("CREATE DATABASE IF NOT EXISTS library_db")
