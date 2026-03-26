@@ -1,11 +1,11 @@
 import csv
 import numpy as np
 
+# Class to represent a single question and QuestionBank to manage multiple questions loaded from CSV.
 class Question:
 
-    def __init__(self, text, a, b, c, d, answer, topic):
+    def __init__(self, text, a, b, c, d, answer):
         self.text = text
-        self.topic = topic
         self.answer = answer.strip().upper()
         # storing options in a dictionary
         self.options = {"A": a, "B": b, "C": c, "D": d}
@@ -36,8 +36,7 @@ class QuestionBank:
                     row["option_b"],
                     row["option_c"],
                     row["option_d"],
-                    row["answer"],
-                    row["topic"]
+                    row["answer"]
                 )
                 self.questions.append(q)
             f.close()
@@ -46,28 +45,10 @@ class QuestionBank:
             print("questions.csv not found!")
             raise
 
-    def get_topics(self):
-        # count how many questions per topic using a dictionary
-        topic_count = {}
-        for q in self.questions:
-            if q.topic in topic_count:
-                topic_count[q.topic] += 1
-            else:
-                topic_count[q.topic] = 1
-        return topic_count
-
-    def get_questions(self, topic, count):
-        # filter questions by topic
-        if topic == "All":
-            pool = self.questions
-        else:
-            pool = []
-            for q in self.questions:
-                if q.topic == topic:
-                    pool.append(q)
-
+    def get_questions(self, count):
+        pool = self.questions
         if len(pool) == 0:
-            print("No questions found for this topic.")
+            print("No questions found.")
             return []
 
         # use numpy to randomly pick questions

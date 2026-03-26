@@ -4,6 +4,7 @@ from datetime import datetime
 from question import QuestionBank
 from validators import check_answer
 
+# QuizEngine and TimedQuiz handle the core quiz logic, user input, and result calculation.
 class QuizEngine:
 
     def __init__(self, db, user_id, username):
@@ -13,27 +14,6 @@ class QuizEngine:
         self._bank = QuestionBank()
         self._score = 0
         self._total = 0
-        self._topic = "All"
-
-    def pick_topic(self):
-        topics = self._bank.get_topics()
-        topic_list = ["All"] + list(topics.keys())
-
-        print("\nTopics available:")
-        for i in range(len(topic_list)):
-            if topic_list[i] == "All":
-                print(str(i) + ". All Topics")
-            else:
-                print(str(i) + ". " + topic_list[i] + " (" + str(topics[topic_list[i]]) + " questions)")
-
-        try:
-            choice = int(input("Choose topic number: "))
-            if choice >= 0 and choice < len(topic_list):
-                self._topic = topic_list[choice]
-            else:
-                self._topic = "All"
-        except ValueError:
-            self._topic = "All"
 
     def ask_count(self):
         try:
@@ -48,9 +28,8 @@ class QuizEngine:
 
     def run(self):
         print("\n=== Quiz Starting ===")
-        self.pick_topic()
         count = self.ask_count()
-        questions = self._bank.get_questions(self._topic, count)
+        questions = self._bank.get_questions(count)
 
         self._total = len(questions)
         self._score = 0
@@ -81,7 +60,7 @@ class QuizEngine:
 
     def save_result(self):
         # save to mysql
-        self._db.save_result(self._user_id, self._username, self._score, self._total, self._topic)
+        self._db.save_result(self._user_id, self._username, self._score, self._total)
 
         # also save to csv file
         try:
@@ -89,7 +68,7 @@ class QuizEngine:
             writer = csv.writer(f)
             pct = round((self._score / self._total) * 100, 1)
             now = datetime.now().strftime("%Y-%m-%d %H:%M")
-            writer.writerow([self._username, self._score, self._total, pct, self._topic, now])
+            writer.writerow([self._username, self._score, self._total, pct, now])
             f.close()
         except Exception as e:
             print("Could not save to csv:", e)
@@ -129,9 +108,8 @@ class TimedQuiz(QuizEngine):
     # overriding run() method from QuizEngine (Polymorphism)
     def run(self):
         print("\n=== Timed Quiz (30 sec per question) ===")
-        self.pick_topic()
         count = self.ask_count()
-        questions = self._bank.get_questions(self._topic, count)
+        questions = self._bank.get_questions(count)
 
         self._total = len(questions)
         self._score = 0

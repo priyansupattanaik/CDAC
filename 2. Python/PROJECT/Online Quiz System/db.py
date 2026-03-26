@@ -1,6 +1,7 @@
 import mysql.connector
 
 # this file handles all database related work
+# Database class handles MySQL connection, table creation, and user/score queries.
 
 class Database:
 
@@ -50,7 +51,6 @@ class Database:
                 username VARCHAR(50),
                 score INT NOT NULL,
                 total INT NOT NULL,
-                topic VARCHAR(50),
                 attempt_date DATETIME DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_id) REFERENCES users(id)
             )
@@ -64,9 +64,9 @@ class Database:
         self.conn.commit()
 
     # save quiz result to database
-    def save_result(self, user_id, username, score, total, topic):
-        sql = "INSERT INTO results (user_id, username, score, total, topic) VALUES (%s, %s, %s, %s, %s)"
-        self.cursor.execute(sql, (user_id, username, score, total, topic))
+    def save_result(self, user_id, username, score, total):
+        sql = "INSERT INTO results (user_id, username, score, total) VALUES (%s, %s, %s, %s)"
+        self.cursor.execute(sql, (user_id, username, score, total))
         self.conn.commit()
 
     # get user details by username
@@ -76,7 +76,7 @@ class Database:
 
     # get all results of a user
     def get_results(self, user_id):
-        self.cursor.execute("SELECT * FROM results WHERE user_id = %s ORDER BY attempt_date", (user_id,))
+        self.cursor.execute("SELECT id, user_id, username, score, total, attempt_date FROM results WHERE user_id = %s ORDER BY attempt_date", (user_id,))
         return self.cursor.fetchall()
 
     # update password

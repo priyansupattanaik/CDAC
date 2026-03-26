@@ -4,6 +4,7 @@ from quiz_engine import QuizEngine, TimedQuiz
 from analytics import Analytics
 from charts import Charts
 
+# Main entry point of the application, handling user registration, login, and the main menu loop.
 def main():
     print("=== Welcome to QuizMaster ===")
     print("Online Quiz System with Analytics")
@@ -74,21 +75,17 @@ def user_menu(db, user):
             if df is not None:
                 c = Charts(user.username)
                 print("\nWhich chart do you want?")
-                print("1. Score Trend + Topic Bar Chart")
-                print("2. Topic Pie Chart")
-                print("3. Score Histogram")
-                print("4. All Charts")
+                print("1. Score Trend Line Chart")
+                print("2. Score Histogram")
+                print("3. All Charts")
 
                 ch2 = input("Choice: ").strip()
                 if ch2 == "1":
                     c.score_trend(df)
                 elif ch2 == "2":
-                    c.pie_chart(df)
-                elif ch2 == "3":
                     c.histogram(df)
-                elif ch2 == "4":
+                elif ch2 == "3":
                     c.score_trend(df)
-                    c.pie_chart(df)
                     c.histogram(df)
                 else:
                     print("Invalid choice.")

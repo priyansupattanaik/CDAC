@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 
+# Analytics class computes statistics like average, max, min, median, and standard deviation using pandas/numpy.
 class Analytics:
 
     def __init__(self, db, user_id, username):
@@ -14,7 +15,7 @@ class Analytics:
         rows = self.__db.get_results(self.__user_id)
         if len(rows) == 0:
             return None
-        df = pd.DataFrame(rows, columns=["id", "user_id", "username", "score", "total", "topic", "date"])
+        df = pd.DataFrame(rows, columns=["id", "user_id", "username", "score", "total", "date"])
         # add percentage column
         df["percentage"] = round(df["score"] / df["total"] * 100, 1)
         return df
@@ -37,21 +38,12 @@ class Analytics:
         print("Std Deviation  :", round(np.std(scores), 2))
         print("Median score   :", np.median(scores), "%")
 
-        # topic wise average using groupby
-        print("\nTopic-wise average:")
-        topic_avg = df.groupby("topic")["percentage"].mean()
-        topic_dict = topic_avg.to_dict()
-        for topic in topic_dict:
-            avg = round(topic_dict[topic], 1)
-            bar = "#" * int(avg // 10)
-            print(" ", topic, ":", avg, "% ", bar)
-
         # last 5 attempts using tail
         print("\nLast 5 attempts:")
         last5 = df.tail(5)
         for index, row in last5.iterrows():
             d = str(row["date"])[:16]
-            print(" ", row["topic"], "|", str(row["score"]) + "/" + str(row["total"]), "|", str(row["percentage"]) + "% |", d)
+            print(" ", str(row["score"]) + "/" + str(row["total"]), "|", str(row["percentage"]) + "% |", d)
 
         return df
 
