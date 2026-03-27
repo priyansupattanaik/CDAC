@@ -1,0 +1,15 @@
+RESULTS SCHEMA:
+('id', 'int', 'NO', 'PRI', None, 'auto_increment')
+('user_id', 'int', 'NO', 'MUL', None, '')
+('username', 'varchar(50)', 'YES', '', None, '')
+('score', 'int', 'NO', '', None, '')
+('total', 'int', 'NO', '', None, '')
+('topic', 'varchar(50)', 'YES', '', None, '')
+('attempt_date', 'datetime', 'YES', '', 'CURRENT_TIMESTAMP', 'DEFAULT_GENERATED')
+
+USERS SCHEMA:
+('id', 'int', 'NO', 'PRI', None, 'auto_increment')
+('username', 'varchar(50)', 'NO', 'UNI', None, '')
+('email', 'varchar(255)', 'YES', 'UNI', None, '')
+('password', 'varchar(100)', 'NO', '', None, '')
+('name', 'varchar(100)', 'YES', '', None, '')
